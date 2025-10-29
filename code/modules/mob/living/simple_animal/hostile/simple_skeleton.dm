@@ -37,7 +37,7 @@
 	del_on_death = TRUE
 	var/start_take_damage = FALSE
 	var/damage_check
-	var/wither = 2.5
+	var/wither = 3.5
 	var/newcolor = rgb(207, 135, 255) //used for livetime code.
 
 	can_have_ai = FALSE //disable native ai
@@ -134,9 +134,9 @@
 		if(lich_antag && user.real_name)
 			faction |= "[user.real_name]_faction"
 
-//	damage_check = world.time
-//	if(is_summoned) //check, if it NOT summoned skeleton, he lifetime - infinity. For mapping-spawned skeltons
-//		addtimer(CALLBACK(src, PROC_REF(deathtime)), 1 MINUTES)
+	damage_check = world.time
+	if(is_summoned) //check, if it NOT summoned skeleton, he lifetime - infinity. For mapping-spawned skeltons
+		addtimer(CALLBACK(src, PROC_REF(deathtime)), 1 MINUTES)
 
 /mob/living/simple_animal/hostile/rogue/skeleton/proc/deathtime()
 	start_take_damage = TRUE

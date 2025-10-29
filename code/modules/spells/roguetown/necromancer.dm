@@ -116,15 +116,15 @@
 		skeleton_roll = rand(1,100)
 		switch(skeleton_roll)
 			if(1 to 20)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/axe(t_turf, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/axe(t_turf, user, cabal_affine, is_summoned)
 			if(21 to 40)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/spear(t_turf, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/spear(t_turf, user, cabal_affine, is_summoned)
 			if(41 to 60)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/guard(t_turf, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/guard(t_turf, user, cabal_affine, is_summoned)
 			if(61 to 80)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/bow(t_turf, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/bow(t_turf, user, cabal_affine, is_summoned)
 			if(81 to 100)
-				new /mob/living/simple_animal/hostile/rogue/skeleton(t_turf, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton(t_turf, user, cabal_affine, is_summoned)
 	return TRUE
 
 /obj/effect/proc_holder/spell/invoked/raise_undead_formation/necromancer
