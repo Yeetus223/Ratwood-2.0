@@ -41,7 +41,7 @@
 	else
 		contents += "<center>FEED ME<BR>"
 		contents += "--------------<BR>"
-		contents += "Guild's Tax: 70%<BR>"
+		contents += "Guild's Tax: 50%<BR>"
 		contents += "Next Balloon: [time2text((next_airlift - world.time), "mm:ss")]</center><BR>"
 
 	if(!user.can_read(src, TRUE))
@@ -94,7 +94,7 @@
 			for(var/obj/I in T)
 				if(I.anchored || !isturf(I.loc) || istype(I, /obj/item/roguecoin)|| istype(I, /obj/structure/handcart))
 					continue
-				var/prize = I.get_real_price() - (I.get_real_price() * (blackmarket ? 0.7 : SStreasury.queens_tax))
+				var/prize = I.get_real_price() - (I.get_real_price() * (blackmarket ? 0.5 : SStreasury.queens_tax))
 				if(prize >= 1)
 					play_sound=TRUE
 					budgie += prize
