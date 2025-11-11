@@ -33,6 +33,7 @@
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+	beltl = /obj/item/storage/magebag/witch
 	pants = /obj/item/clothing/under/roguetown/trou
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	backl = /obj/item/storage/backpack/rogue/satchel
@@ -49,7 +50,7 @@
 	var/classes = list("Old Magick", "Godsblood", "Mystagogue")
 	var/classchoice = input("How do your powers manifest?", "THE OLD WAYS") as anything in classes
 
-	var/shapeshifts = list("Zad", "Cat", "Cat (Black)", "Bat", "Lesser Volf")
+	var/shapeshifts = list("Zad", "Cat", "Cat (Black)", "Bat")
 	var/shapeshiftchoice = input("What form does your second skin take?", "THE OLD WAYS") as anything in shapeshifts
 
 	switch (classchoice)
@@ -58,7 +59,6 @@
 			ADD_TRAIT(H, TRAIT_ARCYNE_T2, TRAIT_GENERIC)
 			H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 			H.mind?.adjust_spellpoints(9) // twelve if you pick arcyne potential
-			beltl = /obj/item/storage/magebag/associate
 		if("Godsblood")
 			//miracle witch: capped at t2 miracles. cannot pray to regain devo, but has high innate regen because of it (2 instead of 1 from major)
 			var/datum/devotion/D = new /datum/devotion/(H, H.patron)
@@ -75,7 +75,6 @@
 			ADD_TRAIT(H, TRAIT_ARCYNE_T1, TRAIT_GENERIC)
 			H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 			H.mind?.adjust_spellpoints(6) // twelve if you pick arcyne potential
-			beltl = /obj/item/storage/magebag/associate
 			neck = /obj/item/clothing/neck/roguetown/psicross/wood
 
 	if(H.mind)
@@ -88,8 +87,6 @@
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/cat/black)
 			if("Bat")
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch)
-			if("Lesser Volf")
-				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/lesser_wolf)
 
 		switch (classchoice)
 			if("Old Magick")
@@ -123,13 +120,13 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/crow/witch
 	knockout_on_death = 15 SECONDS
-	shifted_speed_increase = 1.15
+	shifted_speed_increase = 0.75 //25% slower than normal walking speed
 	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/bat/witch
 	overlay_state = "bat_transform"
 	knockout_on_death = 15 SECONDS
-	shifted_speed_increase = 1.15
+	shifted_speed_increase = 0.75
 	show_true_name = FALSE
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/cat
@@ -148,32 +145,6 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/cat/black
 	shapeshift_type = /mob/living/simple_animal/pet/cat/rogue/black/witch_shifted
-
-/obj/effect/proc_holder/spell/targeted/shapeshift/lesser_wolf
-	name = "Lesser Volf Form"
-	desc = ""
-	overlay_state = "volf_transform"
-	gesture_required = TRUE
-	chargetime = 5 SECONDS
-	recharge_time = 50
-	cooldown_min = 50
-	die_with_shapeshifted_form = FALSE
-	shapeshift_type = /mob/living/simple_animal/hostile/retaliate/rogue/wolf/witch_shifted
-	convert_damage = FALSE
-	do_gib = FALSE
-	shifted_speed_increase = 1.35
-	show_true_name = FALSE
-
-/mob/living/simple_animal/hostile/retaliate/rogue/wolf/witch_shifted
-	name = "lesser volf"
-	desc = "A smaller, runtier variant of the classic volf that hounds the woods nearby. Rarely seen around these parts, and doesn't look nearly as dangerous as its larger counterparts. This one has a peculiar intelligence in its yellow eyes..."
-	STASPD = 15
-	STASTR = 3
-	STACON = 5
-	melee_damage_lower = 9
-	melee_damage_upper = 14
-	del_on_deaggro = null
-	defprob = 70
 
 /mob/living/simple_animal/pet/cat/witch_shifted
 	name = "aloof cat"
