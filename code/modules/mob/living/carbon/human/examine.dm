@@ -76,6 +76,9 @@
 		on_examine_face(user)
 		var/used_name = name
 		var/used_title = get_role_title()
+		// Check for cosmetic class titles (for advclass cosmetic variants)
+		if(mind?.cosmetic_class_title)
+			used_title = mind.cosmetic_class_title
 		if(SSticker.regentmob == src)
 			used_title = "[used_title]" + " Regent"
 		var/display_as_wanderer = FALSE
