@@ -705,7 +705,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "bE" = (
 /obj/structure/rack/rogue,
@@ -756,7 +757,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "bZ" = (
 /obj/effect/wisp/prestidigitation{
@@ -816,13 +818,7 @@
 "cF" = (
 /obj/structure/roguetent,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "cM" = (
 /turf/closed/wall/mineral/rogue/pipe/corners,
 /area/rogue/under/cave/inhumen{
@@ -830,7 +826,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "cP" = (
 /turf/open/floor/rogue/twig/platform,
@@ -848,7 +845,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "cU" = (
 /obj/effect/decal/cleanable/sigil/N,
@@ -952,7 +950,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "dv" = (
 /obj/structure/roguewindow/stained/zizo,
@@ -971,7 +970,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "dz" = (
 /obj/structure/chair/freedomchair{
@@ -983,7 +983,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "dA" = (
 /obj/machinery/light/rogue/smelter,
@@ -1031,7 +1032,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "dO" = (
 /obj/structure/fluff/psycross/zizocross,
@@ -1052,7 +1054,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "dZ" = (
 /obj/effect/proc_holder/spell/invoked/heal,
@@ -1078,7 +1081,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "ei" = (
 /turf/closed/wall/mineral/rogue/tent{
@@ -1089,7 +1093,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "el" = (
 /obj/structure/fluff/railing/fence{
@@ -1184,7 +1189,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "eW" = (
 /obj/structure/glowshroom{
@@ -1214,7 +1220,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "fd" = (
 /obj/structure/fluff/wallclock,
@@ -1224,7 +1231,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "fe" = (
 /obj/structure/bed/rogue/inn/wool,
@@ -1294,7 +1302,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "ft" = (
 /obj/structure/fluff/walldeco/vinez,
@@ -1307,7 +1316,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "fu" = (
 /turf/open/floor/rogue/blocks/bluestone,
@@ -1323,13 +1333,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "fy" = (
 /obj/structure/handcart,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -1409,7 +1419,6 @@
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -1453,13 +1462,7 @@
 /obj/machinery/light/rogue/hearth,
 /obj/item/reagent_containers/glass/bucket/pot/stone,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "fU" = (
 /obj/structure/mineral_door/wood/deadbolt{
 	dir = 8
@@ -1484,7 +1487,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "ga" = (
 /obj/structure/flora/rogueshroom,
@@ -1516,13 +1520,7 @@
 /area/rogue/indoors/banditcamp)
 "gd" = (
 /turf/closed/wall/mineral/rogue/tent,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "gf" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -1586,7 +1584,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "gz" = (
 /obj/structure/bookcase/random/religion,
@@ -1647,7 +1646,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "gU" = (
 /obj/structure/stairs{
@@ -1695,7 +1695,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -1716,7 +1715,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "hg" = (
 /obj/structure/table/wood{
@@ -1769,7 +1769,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "hr" = (
 /obj/structure/flora/ausbushes/reedbush,
@@ -1897,7 +1898,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "hU" = (
 /obj/machinery/light/rogue/firebowl/standing/green{
@@ -1937,12 +1939,12 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "ip" = (
 /turf/open/water/river/flow/east,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -1956,7 +1958,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "iu" = (
 /obj/effect/landmark/start/vampireknight,
@@ -2009,7 +2012,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "iE" = (
 /turf/closed/wall/mineral/rogue/decostone,
@@ -2062,7 +2066,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "iP" = (
 /obj/structure/flora/roguegrass/water/reeds,
@@ -2094,7 +2099,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2121,7 +2125,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "jg" = (
 /turf/open/floor/rogue/dirt/road,
@@ -2139,7 +2144,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "jl" = (
 /obj/structure/fluff/railing/wood/north{
@@ -2182,7 +2188,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "ju" = (
 /obj/structure/rack/rogue,
@@ -2203,7 +2210,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2276,7 +2282,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2309,8 +2314,15 @@
 /turf/open/floor/carpet/inn,
 /area/rogue/indoors/vampire_manor)
 "kc" = (
-/turf/closed/wall/mineral/rogue/stone/moss/unbreakable,
-/area/rogue)
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/cave/inhumen{
+	first_time_text = "Wretches Camp";
+	name = "Wretches Camp";
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
+	droning_sound_dusk = 'sound/music/impish.ogg';
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
+	})
 "kf" = (
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/cave/inhumen{
@@ -2318,7 +2330,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "ki" = (
 /turf/open/floor/rogue/wood/herringbone,
@@ -2332,7 +2345,6 @@
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2348,7 +2360,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "km" = (
 /obj/effect/wisp/prestidigitation{
@@ -2385,7 +2398,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2457,7 +2469,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2466,13 +2477,7 @@
 /obj/item/reagent_containers/glass/mortar,
 /obj/item/pestle,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "kO" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/ausbushes/ppflowers,
@@ -2495,7 +2500,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "kY" = (
 /obj/structure/fluff/railing/wood/east{
@@ -2565,10 +2571,12 @@
 "lo" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/cave/inhumen{
-	first_time_text = "Wretched Grotto";
-	name = "Wretched Grotto";
-	ambientnight = list('sound/ambience/bognight.ogg');
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
+	first_time_text = "Wretches Camp";
+	name = "Wretches Camp";
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
+	droning_sound_dusk = 'sound/music/impish.ogg';
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "lq" = (
 /obj/structure/fluff/statue/gargoyle,
@@ -2609,7 +2617,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2627,7 +2634,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "lz" = (
 /obj/item/roguecoin/gold/pile,
@@ -2678,7 +2686,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "lP" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
@@ -2712,13 +2721,7 @@
 /obj/item/alch/waterdust,
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "mf" = (
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/vampire_manor)
@@ -2746,7 +2749,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2761,7 +2763,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "mo" = (
 /obj/item/rogueweapon/shield/wood,
@@ -2810,7 +2813,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2890,7 +2892,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "mT" = (
 /obj/structure/fluff/walldeco/chains{
@@ -2903,7 +2906,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "mX" = (
 /obj/structure/fluff/railing/corner/south_east,
@@ -2918,7 +2922,6 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -2946,10 +2949,13 @@
 "nk" = (
 /turf/open/floor/rogue/snowrough,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
+"nt" = (
+/obj/structure/flora/roguetree,
+/turf/open/floor/rogue/dirt,
+/area/rogue)
 "nu" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -2976,7 +2982,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "nz" = (
 /obj/machinery/light/rogue/firebowl/standing/green,
@@ -2986,7 +2993,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "nF" = (
 /obj/effect/wisp/prestidigitation{
@@ -3134,7 +3142,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "ow" = (
 /turf/open/floor/rogue/naturalstone,
@@ -3165,7 +3174,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "oC" = (
 /turf/open/floor/rogue/tile/masonic/single,
@@ -3190,7 +3200,6 @@
 /obj/structure/flora/roguetree/pine,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3242,7 +3251,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3332,7 +3340,6 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3346,14 +3353,8 @@
 	ambush_times = null
 	})
 "pn" = (
-/obj/structure/vine,
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretched Grotto";
-	name = "Wretched Grotto";
-	ambientnight = list('sound/ambience/bognight.ogg');
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
-	})
+/turf/open/floor/rogue/dirt,
+/area/rogue)
 "pr" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
@@ -3403,7 +3404,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "pE" = (
 /obj/structure/table/wood{
@@ -3453,13 +3455,7 @@
 "pO" = (
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "pQ" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/bog{
@@ -3479,7 +3475,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3539,13 +3534,9 @@
 	ambush_times = null
 	})
 "qn" = (
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretched Grotto";
-	name = "Wretched Grotto";
-	ambientnight = list('sound/ambience/bognight.ogg');
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
-	})
+/obj/structure/vine,
+/turf/open/floor/rogue/dirt,
+/area/rogue)
 "qp" = (
 /obj/structure/fluff/walldeco/med3,
 /turf/closed/wall/mineral/rogue/craftstone,
@@ -3554,7 +3545,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "qq" = (
 /obj/item/rogueweapon/shield/wood,
@@ -3599,7 +3591,6 @@
 /obj/structure/flora/roguetree/pine,
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3619,7 +3610,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3631,7 +3621,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "qH" = (
 /obj/structure/stairs{
@@ -3645,7 +3636,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3660,7 +3650,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "qS" = (
 /obj/structure/fluff/railing/border/north,
@@ -3723,15 +3714,6 @@
 	ambush_mobs = null;
 	ambush_times = null
 	})
-"re" = (
-/obj/effect/decal/cleanable/debris/stony,
-/turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/bog{
-	name = "Wretched Bog";
-	first_time_text = null;
-	ambush_mobs = null;
-	ambush_times = null
-	})
 "rf" = (
 /turf/open/water/cleanshallow,
 /area/rogue/indoors/vampire_manor)
@@ -3759,7 +3741,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "rr" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
@@ -3790,7 +3773,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3847,13 +3829,23 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
 "rT" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/cave)
+"rU" = (
+/obj/effect/decal/cleanable/debris/stony,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/under/cave/inhumen{
+	first_time_text = "Wretches Camp";
+	name = "Wretches Camp";
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
+	droning_sound_dusk = 'sound/music/impish.ogg';
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
+	})
 "rW" = (
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/naturalstone,
@@ -3868,7 +3860,6 @@
 "rY" = (
 /turf/open/water/cleanshallow,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3936,13 +3927,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "ss" = (
 /obj/structure/flora/roguetree/pine,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -3954,18 +3945,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "sx" = (
 /obj/structure/fluff/walldeco/vinez,
 /turf/closed/wall/mineral/rogue/tent,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "sz" = (
 /obj/effect/landmark/events/testportal{
 	aportalloc = "bandit"
@@ -3989,16 +3975,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
-"sH" = (
-/obj/structure/mineral_door/wood,
-/turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretched Grotto";
-	name = "Wretched Grotto";
-	ambientnight = list('sound/ambience/bognight.ogg');
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "sI" = (
 /obj/structure/fluff/walldeco/bath,
@@ -4099,18 +4077,15 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "tf" = (
 /obj/effect/particle_effect/smoke{
 	lifetime = 14400
 	},
 /turf/open/water/river/flow,
-/area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
-	first_time_text = "Murder Pass";
-	name = "Bandit Woods"
-	})
+/area/rogue)
 "tg" = (
 /obj/structure/well,
 /turf/open/floor/rogue/dirt/road,
@@ -4135,7 +4110,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "tl" = (
 /obj/structure/bed/rogue/shit,
@@ -4171,13 +4147,7 @@
 "tE" = (
 /obj/structure/fluff/alch,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "tG" = (
 /obj/structure/flora/roguetree/burnt,
 /turf/closed/mineral/rogue/bedrock,
@@ -4284,7 +4254,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "uz" = (
 /turf/open/water/river{
@@ -4329,7 +4300,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "uK" = (
 /turf/open/floor/rogue/cobblerock,
@@ -4359,7 +4331,6 @@
 /obj/machinery/light/rogue/campfire,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -4438,7 +4409,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -4476,7 +4446,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "vD" = (
 /obj/structure/fermentation_keg/water,
@@ -4487,7 +4458,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "vF" = (
 /obj/structure/table/wood{
@@ -4597,7 +4569,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -4614,7 +4585,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -4667,22 +4637,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "wu" = (
 /obj/structure/stairs/d,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/banditcamp)
-"wv" = (
-/obj/effect/decal/cleanable/debris/stony,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
 "wx" = (
 /obj/item/reagent_containers/food/snacks/rogue/meat_rotten,
 /turf/open/water/swamp,
@@ -4699,7 +4660,6 @@
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -4711,7 +4671,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "wE" = (
 /obj/machinery/light/rogue/firebowl/standing{
@@ -4760,6 +4721,7 @@
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
 	})
 "wN" = (
+/obj/effect/decal/cleanable/debris/stony,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/bog{
 	name = "Wretched Bog";
@@ -4810,7 +4772,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "xg" = (
 /turf/open/floor/rogue/rooftop/green,
@@ -4857,7 +4820,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "xw" = (
 /obj/structure/flora/roguetree,
@@ -4923,7 +4887,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "xL" = (
 /turf/open/floor/rogue/cobblerock,
@@ -4953,6 +4918,26 @@
 /obj/item/natural/feather,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/banditcamp)
+"xQ" = (
+/obj/structure/vine,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/bog{
+	name = "Wretched Bog";
+	first_time_text = null;
+	ambush_mobs = null;
+	ambush_times = null
+	})
+"xV" = (
+/obj/structure/flora/roguegrass/thorn_bush,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/cave/inhumen{
+	first_time_text = "Wretches Camp";
+	name = "Wretches Camp";
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
+	droning_sound_dusk = 'sound/music/impish.ogg';
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
+	})
 "xY" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/shield/wood,
@@ -4966,13 +4951,7 @@
 /obj/item/herbseed/artemisia,
 /obj/item/herbseed/calendula,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "yb" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/water/swamp,
@@ -5013,7 +4992,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "yj" = (
 /obj/structure/closet/crate/roguecloset,
@@ -5059,7 +5039,6 @@
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5084,7 +5063,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "yA" = (
 /obj/machinery/light/rogue/firebowl/stump,
@@ -5165,7 +5145,6 @@
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5177,7 +5156,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "yZ" = (
 /obj/structure/flora/roguetree/burnt,
@@ -5187,7 +5167,6 @@
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5199,7 +5178,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "zh" = (
 /obj/effect/decal/cleanable/sigil/E,
@@ -5221,7 +5201,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "zj" = (
 /obj/structure/fluff/railing/wood/east{
@@ -5229,7 +5210,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5246,7 +5226,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "zo" = (
 /obj/structure/rack/rogue,
@@ -5257,7 +5238,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "zq" = (
 /turf/closed/mineral/rogue/bedrock,
@@ -5299,13 +5281,7 @@
 /obj/item/reagent_containers/glass/bottle/rogue,
 /obj/item/reagent_containers/glass/bottle/rogue,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "zv" = (
 /obj/structure/closet/crate/coffin/vampire,
 /turf/open/floor/carpet/inn,
@@ -5323,7 +5299,6 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5341,7 +5316,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "zA" = (
 /turf/open/floor/rogue/grasspurple,
@@ -5392,7 +5368,6 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5401,13 +5376,7 @@
 /turf/closed/wall/mineral/rogue/tent{
 	dir = 1
 	},
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "Ab" = (
 /turf/open/water/bloody,
 /area/rogue/under/cave/inhumen{
@@ -5441,7 +5410,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ao" = (
 /obj/structure/chair/freedomchair,
@@ -5508,6 +5478,11 @@
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/open/water/cleanshallow,
 /area/rogue/indoors/vampire_manor)
+"AH" = (
+/turf/closed/wall/mineral/rogue/tent{
+	dir = 4
+	},
+/area/rogue)
 "AI" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /obj/structure/fluff/railing/wood/east{
@@ -5544,7 +5519,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5553,13 +5527,7 @@
 /turf/closed/wall/mineral/rogue/tent{
 	dir = 4
 	},
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "AQ" = (
 /obj/structure/table/wood{
 	dir = 10;
@@ -5577,7 +5545,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "AT" = (
 /obj/machinery/gear_painter,
@@ -5593,7 +5562,6 @@
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5605,7 +5573,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5627,15 +5594,6 @@
 /obj/effect/solid_invisible_barrier,
 /turf/open/floor/rogue/underworld/space/quiet,
 /area/rogue/underworld/dream)
-"Bd" = (
-/turf/open/floor/rogue/blocks/flipped,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
 "Be" = (
 /obj/structure/fluff/railing/wood/north{
 	pixel_x = 2;
@@ -5654,7 +5612,6 @@
 /obj/structure/handcart,
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -5670,11 +5627,10 @@
 "Bi" = (
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	first_time_text = "Wretched Grotto";
+	name = "Wretched Grotto";
+	ambientnight = list('sound/ambience/bognight.ogg');
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
 	})
 "Bj" = (
 /obj/structure/fluff/railing/wood/west{
@@ -5757,7 +5713,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "BD" = (
 /turf/open/floor/rogue/blocks,
@@ -5816,7 +5773,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "BU" = (
 /obj/structure/flora/ausbushes/ppflowers,
@@ -5842,13 +5800,8 @@
 	ambush_times = null
 	})
 "Cd" = (
-/turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretched Grotto";
-	name = "Wretched Grotto";
-	ambientnight = list('sound/ambience/bognight.ogg');
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
-	})
+/turf/open/floor/rogue/cobblerock,
+/area/rogue)
 "Cn" = (
 /obj/structure/flora/roguetree/pine,
 /turf/open/floor/rogue/dirt,
@@ -5876,7 +5829,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Cu" = (
 /turf/open/floor/rogue/grasspurple,
@@ -5945,13 +5899,7 @@
 "CL" = (
 /obj/machinery/light/rogue/cauldron,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "CN" = (
 /obj/item/roguecoin/gold/pile,
 /obj/item/roguegem/green,
@@ -5968,7 +5916,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "CP" = (
 /obj/machinery/light/rogue/firebowl/standing/green{
@@ -5987,7 +5936,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "CT" = (
 /obj/structure/mineral_door/bars{
@@ -6026,7 +5976,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "CZ" = (
 /obj/structure/fluff/statue/gargoyle,
@@ -6076,7 +6027,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Df" = (
 /turf/open/floor/rogue/ruinedwood{
@@ -6092,7 +6044,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Dj" = (
 /obj/effect/decal/cleanable/debris/stony,
@@ -6150,7 +6103,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Dv" = (
 /turf/closed/wall/mineral/rogue/wooddark,
@@ -6168,7 +6122,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Dz" = (
 /obj/structure/bookcase,
@@ -6178,7 +6133,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "DA" = (
 /obj/structure/flora/roguegrass/water,
@@ -6217,6 +6173,14 @@
 /obj/structure/table/vtable,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/vampire_manor)
+"DF" = (
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/bog{
+	name = "Wretched Bog";
+	first_time_text = null;
+	ambush_mobs = null;
+	ambush_times = null
+	})
 "DH" = (
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/bog{
@@ -6240,7 +6204,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "DL" = (
 /turf/open/floor/rogue/snow,
@@ -6253,7 +6218,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "DN" = (
 /obj/structure/fluff/statue/knight/r,
@@ -6330,7 +6296,6 @@
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6370,7 +6335,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "En" = (
 /obj/structure/fluff/railing/wood/east{
@@ -6421,7 +6387,6 @@
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6443,7 +6408,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "EB" = (
 /obj/structure/closet/crate/chest/wicker,
@@ -6475,7 +6441,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "EG" = (
 /obj/structure/fluff/walldeco/bath/three,
@@ -6532,7 +6499,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "EZ" = (
 /obj/machinery/light/rogue/wallfire/candle,
@@ -6560,7 +6528,6 @@
 /obj/structure/flora/roguetree/pine,
 /turf/open/floor/rogue/snowrough,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6602,7 +6569,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Fp" = (
 /obj/structure/fluff/statue/scare,
@@ -6677,7 +6645,6 @@
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6697,10 +6664,6 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/vampire_manor)
-"FR" = (
-/obj/structure/vine,
-/turf/open/floor/rogue/dirt,
-/area/rogue)
 "FT" = (
 /obj/structure/stairs{
 	dir = 1
@@ -6710,7 +6673,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6720,7 +6682,6 @@
 	},
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6789,18 +6750,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Gq" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "Gr" = (
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/dirt,
@@ -6840,7 +6796,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "GI" = (
 /obj/structure/closet/crate/chest/old_crate,
@@ -6867,7 +6824,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "GV" = (
 /obj/structure/fluff/walldeco/vinez/blue,
@@ -6913,7 +6871,6 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6929,7 +6886,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Hs" = (
 /obj/structure/fluff/railing/border/west,
@@ -6939,7 +6897,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Hu" = (
 /obj/item/reagent_containers/glass/bowl,
@@ -6960,7 +6919,6 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6981,7 +6939,6 @@
 "HE" = (
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -6998,7 +6955,6 @@
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7028,7 +6984,6 @@
 "HQ" = (
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7053,7 +7008,6 @@
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7061,7 +7015,6 @@
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7089,7 +7042,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ie" = (
 /obj/structure/table/wood{
@@ -7116,13 +7070,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ik" = (
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/snowrough,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7146,7 +7100,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Is" = (
 /obj/machinery/gear_painter,
@@ -7168,7 +7123,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "IC" = (
 /obj/structure/flora/roguegrass/bush,
@@ -7237,7 +7193,6 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7294,7 +7249,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Jn" = (
 /turf/closed/wall/mineral/rogue/tent{
@@ -7305,7 +7261,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Jp" = (
 /obj/structure/table/wood{
@@ -7366,7 +7323,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Jz" = (
 /obj/structure/closet/crate/coffin/vampire{
@@ -7401,13 +7359,7 @@
 /obj/item/reagent_containers/food/snacks/tallow,
 /obj/machinery/light/rogue/wallfire/candle/floorcandle,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "JI" = (
 /obj/structure/bookcase/random/religion,
 /turf/open/floor/rogue/blocks/flipped,
@@ -7488,7 +7440,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Kf" = (
 /obj/structure/fluff/walldeco/bath/five,
@@ -7527,7 +7480,6 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7557,7 +7509,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ky" = (
 /obj/structure/flora/roguegrass/water,
@@ -7641,7 +7594,6 @@
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7685,7 +7637,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "La" = (
 /obj/structure/flora/rogueshroom,
@@ -7697,7 +7650,6 @@
 	},
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7718,7 +7670,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Le" = (
 /obj/effect/landmark/events/testportal{
@@ -7781,7 +7734,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Lq" = (
 /obj/structure/mineral_door/wood,
@@ -7791,7 +7745,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Lr" = (
 /obj/structure/bed/rogue/shit,
@@ -7806,7 +7761,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Lu" = (
 /obj/structure/stairs{
@@ -7815,7 +7771,6 @@
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7878,7 +7833,18 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
+	})
+"LM" = (
+/turf/open/floor/rogue/blocks/flipped,
+/area/rogue/under/cave/inhumen{
+	first_time_text = "Wretches Camp";
+	name = "Wretches Camp";
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
+	droning_sound_dusk = 'sound/music/impish.ogg';
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "LO" = (
 /obj/structure/closet/crate/chest,
@@ -7926,7 +7892,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Mb" = (
 /obj/structure/table/wood/poor,
@@ -7937,7 +7904,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Mc" = (
 /obj/effect/landmark/start/vampirespawn,
@@ -7953,17 +7921,10 @@
 /obj/item/reagent_containers/glass/bottle/alchemical,
 /obj/item/reagent_containers/glass/bottle/alchemical,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "Mf" = (
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -7983,7 +7944,6 @@
 /obj/item/natural/bundle/stick,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -8013,7 +7973,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Mx" = (
 /obj/item/reagent_containers/glass/bowl/gold,
@@ -8049,11 +8010,10 @@
 /obj/structure/flora/roguegrass/thorn_bush,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	first_time_text = "Wretched Grotto";
+	name = "Wretched Grotto";
+	ambientnight = list('sound/ambience/bognight.ogg');
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
 	})
 "MJ" = (
 /obj/machinery/light/rogue/firebowl,
@@ -8082,18 +8042,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "MO" = (
 /obj/machinery/light/rogue/wallfire/candle/floorcandle,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "MS" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f"
@@ -8148,7 +8103,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Nf" = (
 /obj/effect/landmark/start/bandit,
@@ -8176,7 +8132,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Np" = (
 /obj/structure/fluff/railing/wood/north{
@@ -8197,7 +8154,6 @@
 	},
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -8209,12 +8165,12 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ns" = (
 /turf/open/water/river/flow/west,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -8243,7 +8199,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "NH" = (
 /obj/structure/rack/rogue,
@@ -8263,7 +8220,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "NL" = (
 /obj/structure/fluff/walldeco/vinez,
@@ -8338,6 +8296,15 @@
 	ambush_mobs = null;
 	ambush_times = null
 	})
+"Oi" = (
+/obj/structure/mineral_door/wood,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/under/cave/inhumen{
+	first_time_text = "Wretched Grotto";
+	name = "Wretched Grotto";
+	ambientnight = list('sound/ambience/bognight.ogg');
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
+	})
 "Oj" = (
 /obj/machinery/light/rogue/oven/south,
 /obj/machinery/light/rogue/hearth,
@@ -8347,7 +8314,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ok" = (
 /obj/structure/fluff/walldeco/maidendrape,
@@ -8470,7 +8438,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "OS" = (
 /obj/structure/flora/roguegrass,
@@ -8497,7 +8466,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -8517,12 +8485,18 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Pe" = (
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/banditcamp)
+"Pf" = (
+/turf/closed/wall/mineral/rogue/tent{
+	dir = 1
+	},
+/area/rogue)
 "Ph" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
@@ -8534,7 +8508,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Pk" = (
 /obj/structure/flora/roguetree,
@@ -8557,11 +8532,10 @@
 "Pn" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	first_time_text = "Wretched Grotto";
+	name = "Wretched Grotto";
+	ambientnight = list('sound/ambience/bognight.ogg');
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
 	})
 "Po" = (
 /obj/structure/fluff/railing/wood/east{
@@ -8570,7 +8544,6 @@
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -8628,13 +8601,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "PF" = (
 /obj/structure/flora/roguetree/pine,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -8650,7 +8623,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "PJ" = (
 /obj/structure/mineral_door/wood/deadbolt/shutter{
@@ -8663,7 +8637,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "PK" = (
 /obj/structure/fluff/railing/wood/north{
@@ -8699,7 +8674,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "PX" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -8752,12 +8728,12 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Qm" = (
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -8824,6 +8800,15 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/banditcamp)
+"QB" = (
+/obj/effect/particle_effect/smoke{
+	lifetime = 14400
+	},
+/turf/open/water/river/flow,
+/area/rogue/outdoors/woods{
+	first_time_text = "Murder Pass";
+	name = "Bandit Woods"
+	})
 "QE" = (
 /turf/open/floor/rogue/rooftop/green/corner1/dirone,
 /area/rogue/indoors/eventarea)
@@ -8865,10 +8850,6 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/vampire_manor)
-"QN" = (
-/obj/structure/flora/roguetree,
-/turf/open/floor/rogue/dirt,
-/area/rogue)
 "QQ" = (
 /obj/item/skull,
 /obj/effect/decal/edge{
@@ -8908,7 +8889,6 @@
 "QY" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -8937,7 +8917,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Rh" = (
 /obj/structure/fluff/railing/border/west{
@@ -8949,7 +8930,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ri" = (
 /obj/structure/rack/rogue,
@@ -9012,7 +8994,6 @@
 /obj/structure/far_travel,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -9022,7 +9003,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -9070,8 +9050,8 @@
 	ambientnight = list('sound/ambience/bognight.ogg');
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
 	})
-"RR" = (
-/obj/structure/flora/roguegrass/thorn_bush,
+"RT" = (
+/obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/inhumen{
 	first_time_text = "Wretched Grotto";
@@ -9121,7 +9101,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Sk" = (
 /obj/machinery/light/rogue/firebowl/standing/green,
@@ -9131,7 +9112,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Sl" = (
 /obj/structure/fermentation_keg/random/water,
@@ -9158,6 +9140,9 @@
 	ambientnight = list('sound/ambience/bognight.ogg');
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
 	})
+"Su" = (
+/turf/closed/wall/mineral/rogue/stone/moss/unbreakable,
+/area/rogue)
 "Sv" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/eventarea)
@@ -9204,7 +9189,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "SQ" = (
 /obj/structure/flora/mushroomcluster,
@@ -9234,7 +9220,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ti" = (
 /obj/structure/vine,
@@ -9321,7 +9308,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "TF" = (
 /turf/closed/wall/mineral/rogue/wooddark,
@@ -9330,7 +9318,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "TH" = (
 /obj/structure/rack/rogue,
@@ -9411,7 +9400,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "TZ" = (
 /obj/structure/fluff/railing/wood,
@@ -9496,7 +9486,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ut" = (
 /obj/effect/proc_holder/spell/invoked/heal,
@@ -9524,13 +9515,7 @@
 /obj/item/reagent_containers/glass/bottle/alchemical,
 /obj/item/reagent_containers/glass/bottle/alchemical,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "UC" = (
 /obj/machinery/light/rogue/torchholder/hotspring,
 /turf/open/floor/rogue/cobblerock,
@@ -9555,7 +9540,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "UH" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -9604,7 +9590,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "UT" = (
 /obj/structure/table/optable,
@@ -9665,11 +9652,11 @@
 "Vj" = (
 /obj/structure/vine,
 /turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/bog{
-	name = "Wretched Bog";
-	first_time_text = null;
-	ambush_mobs = null;
-	ambush_times = null
+/area/rogue/under/cave/inhumen{
+	first_time_text = "Wretched Grotto";
+	name = "Wretched Grotto";
+	ambientnight = list('sound/ambience/bognight.ogg');
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
 	})
 "Vk" = (
 /obj/structure/fluff/railing/border{
@@ -9696,7 +9683,6 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -9755,7 +9741,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "VF" = (
 /obj/structure/fluff/statue/tdummy,
@@ -9764,11 +9751,10 @@
 "VH" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	first_time_text = "Wretched Grotto";
+	name = "Wretched Grotto";
+	ambientnight = list('sound/ambience/bognight.ogg');
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
 	})
 "VK" = (
 /obj/structure/fluff/railing/border{
@@ -9786,7 +9772,6 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -9870,7 +9855,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Wq" = (
 /obj/machinery/light/rogue/firebowl,
@@ -9885,13 +9871,14 @@
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/indoors/eventarea)
 "Ws" = (
-/obj/structure/mineral_door/wood,
-/turf/open/floor/rogue/cobblerock,
+/turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/inhumen{
-	first_time_text = "Wretched Grotto";
-	name = "Wretched Grotto";
-	ambientnight = list('sound/ambience/bognight.ogg');
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg')
+	first_time_text = "Wretches Camp";
+	name = "Wretches Camp";
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
+	droning_sound_dusk = 'sound/music/impish.ogg';
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Wt" = (
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -9922,7 +9909,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Wz" = (
 /obj/structure/fluff/pillow/magenta{
@@ -9943,7 +9931,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "WB" = (
 /turf/closed/wall/mineral/rogue/craftstone,
@@ -9972,14 +9961,12 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
 "WM" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -9995,6 +9982,16 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/vampire_manor)
+"WQ" = (
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/under/cave/inhumen{
+	first_time_text = "Wretches Camp";
+	name = "Wretches Camp";
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
+	droning_sound_dusk = 'sound/music/impish.ogg';
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
+	})
 "WW" = (
 /obj/structure/rack/rogue,
 /obj/item/coveter,
@@ -10004,7 +10001,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -10057,7 +10053,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Xs" = (
 /obj/structure/fluff/railing/wood/north{
@@ -10067,7 +10064,6 @@
 	},
 /turf/open/floor/rogue/snowpatchy,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -10199,7 +10195,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Ya" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -10231,6 +10228,17 @@
 	name = "Wretched Caves";
 	first_time_text = null;
 	ambush_mobs = null
+	})
+"Yf" = (
+/obj/structure/roguetent,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/under/cave/inhumen{
+	first_time_text = "Wretches Camp";
+	name = "Wretches Camp";
+	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
+	droning_sound_dusk = 'sound/music/impish.ogg';
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Yi" = (
 /turf/closed/mineral/random/rogue/coppertin/med,
@@ -10311,7 +10319,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "YA" = (
 /obj/structure/flora/roguegrass/thorn_bush,
@@ -10329,7 +10338,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "YE" = (
 /obj/structure/flora/roguegrass/water,
@@ -10405,18 +10415,13 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "YV" = (
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/dirt,
-/area/rogue/under/cave/inhumen{
-	first_time_text = "Wretches Camp";
-	name = "Wretches Camp";
-	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
-	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
-	})
+/area/rogue)
 "YZ" = (
 /obj/structure/stairs{
 	dir = 4
@@ -10502,7 +10507,8 @@
 	name = "Wretches Camp";
 	ambientsounds = list('sound/ambience/bogday (1).ogg','sound/ambience/bogday (2).ogg','sound/ambience/bogday (3).ogg');
 	droning_sound_dusk = 'sound/music/impish.ogg';
-	droning_sound_night = 'sound/music/impish.ogg'
+	droning_sound_night = 'sound/music/impish.ogg';
+	droning_sound = 'sound/music/impish.ogg'
 	})
 "Zu" = (
 /obj/structure/stairs/stone{
@@ -10510,14 +10516,12 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
 "Zw" = (
 /turf/open/water/river/flow,
 /area/rogue/outdoors/woods{
-	droning_sound = list('sound/ambience/MOUNTAIN (1).ogg','sound/ambience/MOUNTAIN(2).ogg');
 	first_time_text = "Murder Pass";
 	name = "Bandit Woods"
 	})
@@ -11338,7 +11342,7 @@ ip
 ip
 bX
 bX
-HE
+bX
 WM
 HY
 WM
@@ -11453,7 +11457,7 @@ rQ
 rQ
 bX
 bX
-tf
+QB
 Zw
 Zw
 Zw
@@ -11583,8 +11587,8 @@ bX
 bX
 bX
 bX
-bX
-bX
+HE
+HE
 HE
 HE
 nk
@@ -14973,13 +14977,13 @@ vY
 vY
 kj
 Ik
-bX
-bX
-bX
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
+HE
+HE
+HE
 bX
 rQ
 rQ
@@ -15103,13 +15107,13 @@ QY
 HE
 HE
 HE
-bX
-bX
-bX
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
+HE
+HE
+HE
 bX
 rQ
 rQ
@@ -15234,12 +15238,12 @@ fM
 fM
 HE
 fM
-bX
-bX
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
+HE
+HE
 bX
 rQ
 rQ
@@ -15344,10 +15348,10 @@ rQ
 rQ
 rQ
 rQ
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
 HY
 HY
 wa
@@ -15364,12 +15368,12 @@ WM
 WM
 Zu
 WM
-bX
-bX
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
+HE
+HE
 bX
 rQ
 rQ
@@ -15474,7 +15478,7 @@ rQ
 rQ
 rQ
 rQ
-bX
+HE
 pU
 QY
 HM
@@ -15490,16 +15494,16 @@ QY
 QY
 WM
 wa
-bX
-bX
-bX
+HE
+HE
+HE
 WK
 WK
 Vq
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
 bX
 rQ
 rQ
@@ -15604,7 +15608,7 @@ rQ
 rQ
 rQ
 rQ
-bX
+HE
 pU
 QY
 HM
@@ -15619,10 +15623,10 @@ Po
 WM
 fy
 yq
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
 WM
 QY
 QY
@@ -15734,7 +15738,7 @@ rQ
 rQ
 rQ
 rQ
-bX
+HE
 pU
 QY
 HM
@@ -15747,12 +15751,12 @@ WM
 wa
 WM
 HY
-bX
-bX
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
+HE
+HE
 fM
 WM
 WM
@@ -15864,10 +15868,10 @@ rQ
 rQ
 rQ
 rQ
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
 wa
 WM
 HY
@@ -15875,21 +15879,21 @@ HY
 HE
 HY
 HY
-bX
-bX
-bX
-bX
-bX
-bX
-bX
-bX
-bX
+HE
+HE
+HE
+HE
+HE
+HE
+HE
+HE
+HE
 fM
 HE
 fM
 HE
 Kk
-bX
+HE
 bX
 rQ
 rQ
@@ -20816,9 +20820,9 @@ bX
 bX
 bX
 bX
-nw
+Pf
 pO
-VH
+pn
 kN
 Gq
 MO
@@ -20946,12 +20950,12 @@ DD
 VC
 YA
 ws
-nw
+Pf
 YV
-VH
-Pn
-VH
-Pn
+pn
+Cd
+pn
+Cd
 gd
 uz
 TT
@@ -21061,13 +21065,13 @@ bX
 bX
 TW
 TW
-GZ
+YD
 PE
 dQ
 uJ
 uJ
-Pn
-MI
+lo
+xV
 TW
 bX
 Zp
@@ -21078,9 +21082,9 @@ ws
 ws
 Aa
 tE
-Pn
+Cd
 fT
-Pn
+Cd
 zu
 sx
 uz
@@ -21090,7 +21094,7 @@ te
 Io
 te
 Mw
-Pn
+lo
 PV
 kl
 te
@@ -21208,9 +21212,9 @@ ws
 ws
 Aa
 JF
-Pn
+Cd
 CL
-Pn
+Cd
 Me
 sx
 uz
@@ -21220,7 +21224,7 @@ te
 kl
 PV
 xq
-VH
+kc
 te
 Io
 te
@@ -21322,7 +21326,7 @@ te
 yg
 xq
 xq
-Pn
+lo
 Mw
 xq
 xq
@@ -21338,9 +21342,9 @@ ws
 ws
 Aa
 ya
-VH
-Pn
-VH
+pn
+Cd
+pn
 Uz
 sx
 kC
@@ -21466,11 +21470,11 @@ hu
 xm
 eu
 RY
-nw
+Pf
 md
-VH
-VH
-VH
+pn
+pn
+pn
 zu
 gd
 uz
@@ -21480,7 +21484,7 @@ TW
 kl
 PV
 xq
-VH
+kc
 Xp
 TW
 te
@@ -21583,7 +21587,7 @@ Ne
 qF
 xq
 xq
-VH
+kc
 xq
 Lq
 Cb
@@ -21600,8 +21604,8 @@ RY
 AP
 AP
 cF
-ei
-ei
+AH
+AH
 eu
 uz
 uz
@@ -21614,7 +21618,7 @@ xq
 TW
 xq
 Mw
-VH
+kc
 Sj
 te
 TW
@@ -21708,12 +21712,12 @@ rQ
 rQ
 rQ
 bX
-bX
+WQ
 te
-wv
+rU
 xq
 Ld
-Pn
+lo
 xq
 TW
 ws
@@ -21744,7 +21748,7 @@ lx
 te
 ov
 xq
-VH
+kc
 pD
 dN
 GQ
@@ -21838,10 +21842,10 @@ rQ
 rQ
 rQ
 bX
-bX
-bX
-GZ
-GZ
+WQ
+WQ
+YD
+YD
 Sj
 te
 te
@@ -22102,7 +22106,7 @@ te
 cM
 xq
 xq
-VH
+kc
 gy
 Zp
 ws
@@ -22230,9 +22234,9 @@ rQ
 bX
 te
 dz
-Pn
+lo
 gP
-Pn
+lo
 te
 vJ
 ws
@@ -22360,8 +22364,8 @@ rQ
 bX
 te
 hf
-VH
-Pn
+kc
+lo
 xq
 Lq
 fK
@@ -22752,8 +22756,8 @@ bX
 bX
 GZ
 GZ
-TW
-TW
+Su
+Su
 YA
 xm
 xm
@@ -22882,7 +22886,7 @@ bX
 bX
 bX
 bX
-kc
+Su
 yA
 xm
 xL
@@ -23159,7 +23163,7 @@ JX
 TF
 Jn
 Jn
-cF
+Yf
 Jn
 TF
 Jn
@@ -23288,7 +23292,7 @@ JX
 TF
 BT
 EY
-Pn
+lo
 xd
 Em
 Td
@@ -23400,7 +23404,7 @@ rQ
 bX
 bX
 bX
-QN
+nt
 iZ
 xm
 xm
@@ -23418,10 +23422,10 @@ nw
 CO
 Fo
 Em
-Pn
-Pn
-Pn
-Pn
+lo
+lo
+lo
+lo
 Em
 hq
 xq
@@ -23529,7 +23533,7 @@ rQ
 rQ
 bX
 bX
-FR
+qn
 eu
 Px
 wj
@@ -23548,11 +23552,11 @@ nw
 Wo
 Dy
 EE
-Pn
+lo
 Em
 Em
 Em
-Pn
+lo
 Pj
 xq
 mT
@@ -23808,15 +23812,15 @@ nw
 te
 Oj
 js
-Pn
+lo
 jf
 TF
 Zs
-Pn
-Pn
+lo
+lo
 Em
 Em
-cF
+Yf
 Kn
 jT
 Bj
@@ -23938,14 +23942,14 @@ nw
 te
 Lo
 js
-Pn
+lo
 Zs
 TF
 Pd
 Em
 Em
-Pn
-Pn
+lo
+lo
 DM
 yF
 jT
@@ -24049,7 +24053,7 @@ rQ
 rQ
 bX
 bX
-FR
+qn
 qd
 FJ
 Of
@@ -24179,7 +24183,7 @@ rQ
 rQ
 bX
 bX
-FR
+qn
 Xw
 YG
 gN
@@ -24198,10 +24202,10 @@ nw
 NJ
 Dy
 EE
-Pn
+lo
 Em
 xd
-Pn
+lo
 Em
 yY
 xq
@@ -24312,11 +24316,11 @@ BJ
 hd
 hd
 BJ
-qn
+Bi
 BJ
 hd
-sH
-sH
+RT
+RT
 BJ
 CV
 ws
@@ -24328,11 +24332,11 @@ nw
 eT
 EE
 DK
-Pn
-Pn
+lo
+lo
 Em
 Em
-Pn
+lo
 hq
 xq
 zi
@@ -24442,11 +24446,11 @@ hd
 cz
 ZS
 eD
-lo
+Pn
 hO
 BP
-lo
-lo
+Pn
+Pn
 gz
 hd
 BJ
@@ -24462,7 +24466,7 @@ Em
 xd
 Em
 Kx
-Pn
+lo
 Pj
 YR
 zg
@@ -24570,12 +24574,12 @@ rQ
 bX
 BJ
 rz
-qn
-lo
-lo
+Bi
+Pn
+Pn
 Az
-lo
-lo
+Pn
+Pn
 UI
 XE
 BJ
@@ -24589,7 +24593,7 @@ TS
 TF
 ei
 ei
-cF
+Yf
 ei
 TF
 ei
@@ -24700,7 +24704,7 @@ rQ
 bX
 BJ
 Eh
-lo
+Pn
 gx
 VA
 BJ
@@ -24708,7 +24712,7 @@ eN
 Xx
 Kv
 Xx
-qn
+Bi
 yc
 xm
 ws
@@ -24830,12 +24834,12 @@ rQ
 bX
 ox
 LX
-qn
-lo
+Bi
+Pn
 LX
 BJ
 jN
-qn
+Bi
 JI
 Ug
 BJ
@@ -24961,12 +24965,12 @@ bX
 BJ
 Vc
 gx
-lo
+Pn
 VV
 hd
 Ug
 Xx
-pn
+Vj
 Ug
 BJ
 hd
@@ -25090,14 +25094,14 @@ rQ
 bX
 BJ
 LX
-qn
-lo
+Bi
+Pn
 LX
 BJ
 ho
 lq
-pn
-pn
+Vj
+Vj
 BJ
 ug
 pQ
@@ -25220,7 +25224,7 @@ rQ
 bX
 BJ
 ho
-Cd
+VH
 Xx
 BJ
 hd
@@ -25350,15 +25354,15 @@ rQ
 bX
 BJ
 BJ
-Cd
+VH
 MS
 Ab
 hk
 nF
 BJ
 BJ
-pn
-wN
+Vj
+DF
 Yj
 Lx
 Xw
@@ -25480,15 +25484,15 @@ rQ
 bX
 BJ
 wL
-qn
-Cd
+Bi
+VH
 gE
 Fg
 Ea
 hd
 BJ
 Ug
-Vj
+xQ
 xL
 Xk
 ln
@@ -25510,12 +25514,12 @@ xm
 tX
 Ur
 MN
-Pn
+lo
 TD
-Bi
-Bd
+Ws
+LM
 Ct
-Bd
+LM
 Sk
 Sj
 bX
@@ -25611,15 +25615,15 @@ bX
 ho
 QQ
 SF
-qn
+Bi
 wU
 Ab
 Fg
 Lc
 BJ
 Ug
-qn
-lo
+Bi
+Pn
 Qa
 dv
 ws
@@ -25640,12 +25644,12 @@ xm
 pQ
 Ur
 SK
-Pn
+lo
 te
 fd
-Bi
-Bi
-Bi
+Ws
+Ws
+Ws
 Ii
 Sj
 bX
@@ -25748,7 +25752,7 @@ Ab
 Ab
 hd
 hd
-RR
+MI
 pw
 WI
 CV
@@ -25770,12 +25774,12 @@ pQ
 Yu
 Sj
 WA
-Pn
+lo
 te
 Ix
-Bi
-Bd
-Bi
+Ws
+LM
+Ws
 Sk
 sC
 sC
@@ -25872,14 +25876,14 @@ oe
 Lc
 VW
 gZ
-qn
+Bi
 cf
 VQ
 hd
 BJ
 ho
-lo
-Cd
+Pn
+VH
 fB
 hd
 BJ
@@ -26005,10 +26009,10 @@ Qg
 hD
 sQ
 ZA
-qn
-lo
+Bi
+Pn
 Kv
-re
+wN
 xL
 Cv
 Hv
@@ -26138,11 +26142,11 @@ Fs
 Xx
 UI
 UI
-lo
-lo
-lo
-lo
-Ws
+Pn
+Pn
+Pn
+Pn
+Oi
 xL
 xL
 xL
@@ -26260,17 +26264,17 @@ rQ
 bX
 RO
 cZ
-qn
+Bi
 iR
 St
 zh
 aP
-qn
-Cd
-qn
-lo
-lo
-lo
+Bi
+VH
+Bi
+Pn
+Pn
+Pn
 Tq
 ho
 xL
@@ -26392,14 +26396,14 @@ Fg
 Lc
 yD
 xA
-qn
+Bi
 cf
 vG
 BJ
 BJ
 ho
-Cd
-Cd
+VH
+VH
 xL
 BJ
 BJ
@@ -26528,7 +26532,7 @@ Ab
 hd
 BJ
 BJ
-Cd
+VH
 wj
 WI
 ho
@@ -26651,7 +26655,7 @@ bX
 ho
 pL
 VW
-qn
+Bi
 wU
 Ab
 Cq
@@ -26936,7 +26940,7 @@ gV
 gV
 Zp
 Zp
-bX
+WQ
 TW
 TW
 Ur
