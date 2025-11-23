@@ -1357,31 +1357,34 @@
 			WRITE_FILE(json_file, "{}")
 
 		var/list/json = json_decode(file2text(json_file))
-		if(!json) json = list()
+		if(!json)
+			json = list()
 
 		var/popup = "<center><b>Curses for [the_key]</b><br><br>"
 
-		// List curses
-		var/valid = FALSE
+		// detect if any valid entries exist
+		var/has_any = FALSE
 		for(var/c in json)
 			if(json[c])
-				valid = TRUE
+				has_any = TRUE
 				break
 
-		if(!valid)
+		if(!has_any)
 			popup += "<i>No curses found.</i><br>"
 		else
 			popup += "<b>Active Curses:</b><br>"
-			for(var/curse in json)
-				popup += "<a href='?_src_=holder;[HrefToken()];inspectcurse=[the_key];name=[curse]'>[curse]</a> "
-				popup += "<a href='?_src_=holder;[HrefToken()];removecurse=[the_key];name=[curse]'><font color='red'>X</font></a><br>"
+			for(var/curse_name in json)
+				if(!json[curse_name])
+					continue
+
+				popup += "<a href='?_src_=holder;[HrefToken()];inspectcurse=[curse_name];key=[the_key]'>[curse_name]</a> "
+
+				popup += "<a href='?_src_=holder;[HrefToken()];removecurse=[curse_name];key=[the_key]'><font color='red'>X</font></a><br>"
 
 		popup += "<br><hr><br>"
 
-		// Add new curse (pass ckey)
 		popup += "<a href='?_src_=holder;[HrefToken()];addcurse=[the_key]'><b>Add New Curse</b></a><br><br>"
 
-		// Clear all
 		popup += "<a href='?_src_=holder;[HrefToken()];clearallcurses=[the_key]'><font color='red'>Clear ALL curses</font></a>"
 
 		popup += "</center>"
@@ -1390,7 +1393,6 @@
 		B.set_content(popup)
 		B.open()
 		return
-
 	else if(href_list["addcurse"])
 		var/key = href_list["addcurse"]
 
@@ -1410,13 +1412,20 @@
 
 
 	else if(href_list["removecurse"])
-		var/name = href_list["removecurse"]
+		// UI sends:
+		// removecurse = curse_name
+		// key        = player ckey
+		var/curse_name = href_list["removecurse"]
 		var/key = href_list["key"]
 
-		if(remove_player_curse(key, name))
-			usr << "<span class='notice'>Removed curse <b>[name]</b> from [key].</span>"
+		if(!key || !curse_name)
+			usr << "<span class='warning'>Invalid removal request.</span>"
+			return
+
+		if(remove_player_curse(key, curse_name))
+			usr << "<span class='notice'>Removed curse <b>[curse_name]</b> from [key].</span>"
 		else
-			usr << "<span class='warning'>Failed to remove curse <b>[name]</b> from [key].</span>"
+			usr << "<span class='warning'>Failed to remove curse <b>[curse_name]</b> from [key].</span>"
 
 		src.player_panel_new()
 		return
@@ -1428,6 +1437,9 @@
 		fdel(json_file)
 		WRITE_FILE(json_file, "{}")
 
+		// refresh live state if online
+		refresh_player_curses_for_key(key)
+
 		usr << "<span class='notice'>Cleared ALL curses from [key].</span>"
 
 		src.player_panel_new()
@@ -1435,28 +1447,29 @@
 
 
 	else if(href_list["inspectcurse"])
-		var/key = href_list["inspectcurse"]
-		var/name = href_list["name"]
+		var/curse_name = href_list["inspectcurse"]
+		var/key = href_list["key"]
 
-		// Load JSON
+		if(!key || !curse_name)
+			usr << "<span class='warning'>Invalid curse selection.</span>"
+			return
+
 		var/json_file = file("data/player_saves/[copytext(key,1,2)]/[key]/curses.json")
 		if(!fexists(json_file))
 			WRITE_FILE(json_file, "{}")
 
 		var/list/json = json_decode(file2text(json_file))
-		if(!json || !json[name])
+		if(!json || !json[curse_name])
 			usr << "<span class='warning'>Curse not found.</span>"
 			return
 
-		var/list/C = json[name]
+		var/list/C = json[curse_name]
 
-		var/text = "<b><u>Curse:</u></b> [name]<br><hr>"
+		var/text = "<b><u>Curse:</u></b> [curse_name]<br><hr>"
 
-		// Pretty formatting for fields
 		for(var/field in C)
 			var/value = C[field]
 
-			// Lists need special formatting (effect_args)
 			if(islist(value))
 				text += "<b>[field]:</b><br>"
 				for(var/subfield in value)
@@ -1464,13 +1477,11 @@
 			else
 				text += "<b>[field]:</b> [value]<br>"
 
-		// Compute days remaining (optional polish)
 		if(C["expires"])
 			var/days_left = C["expires"] - now_days()
 			if(days_left < 0) days_left = 0
 			text += "<br><b>Days Remaining:</b> [days_left]<br>"
 
-		// Display cooldown info
 		if(C["cooldown"])
 			text += "<b>Cooldown (seconds):</b> [C["cooldown"]]<br>"
 

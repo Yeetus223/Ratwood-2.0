@@ -198,10 +198,13 @@
 				H.gib_and_reset_body()
 		*/
 		if("gib")
-			L.gib()
-		if("gib and explode")
-			explosion(get_turf(L), 1, 2, 3, 0, TRUE, TRUE)
-			L.gib()
+			if(!L)
+				return
+			message_admins(span_adminnotice("[key_name_admin(owner)] gibbed due to curse."))
+			SSblackbox.record_feedback("tally", "curse", 1, "Gib Curse") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+			addtimer(CALLBACK(L, TYPE_PROC_REF(/mob/living, gib), 1, 1, 1), 2)
+			return
+
 		else
 			// Unknown effect
 			return
@@ -306,28 +309,46 @@
 	return TRUE
 
 
-/proc/remove_player_curse(key, curse)
-	if(!key || !curse)
+/proc/remove_player_curse(key, curse_name)
+	if(!key || !curse_name)
 		return FALSE
 
+	// --- Load JSON ---
 	var/json_file = file("data/player_saves/[copytext(key,1,2)]/[key]/curses.json")
 	if(!fexists(json_file))
 		WRITE_FILE(json_file, "{}")
 
 	var/list/json = json_decode(file2text(json_file))
-	if(!json)
+	if(!json || !json[curse_name])
 		return FALSE
 
-	// ✅ actually remove the entry
-	json -= curse
+	// --- Remove from JSON ---
+	json[curse_name] = null
 
 	fdel(json_file)
 	WRITE_FILE(json_file, json_encode(json))
 
-	// ✅ live refresh so datum detaches and disappears from UI
-	refresh_player_curses_for_key(key)
+	// --- Live cleanup if player online ---
+	for(var/client/C in GLOB.clients)
+		if(C && C.ckey == key)
+			var/mob/M = C.mob
+			if(!M || !M.mind || !M.mind.curses)
+				break
+
+			if(M.mind.curses[curse_name])
+				var/datum/modular_curse/CR = M.mind.curses[curse_name]
+
+				// ✅ detach signals
+				if(CR)
+					CR.detach()
+
+				// ✅ remove datum from mind
+				M.mind.curses -= curse_name
+
+			break
 
 	return TRUE
+
 
 
 
@@ -339,34 +360,53 @@
 	if(!M || !key)
 		return
 
-	// ✅ Clear old datums so we never double-load
-	if(M.curses)
-		for(var/datum/modular_curse/C in M.curses)
-			C.detach()
-
-	M.curses = list()
-
 	var/list/json = get_player_curses(key)
-	if(!json || !json.len)
-		return
+	if(!json)
+		json = list()
+
+	if(!M.curses)
+		M.curses = list()
+
+	for(var/existing in M.curses)
+		if(!(existing in json))
+			var/datum/modular_curse/oldC = M.curses[existing]
+			if(oldC)
+				oldC.detach()
+			M.curses -= existing
 
 	for(var/curse_name in json)
 		var/list/C = json[curse_name]
-		if(!C) continue
+		if(!C)
+			continue
 
-		var/datum/modular_curse/CR = new
-		CR.name         = curse_name
-		CR.expires      = C["expires"]
-		CR.chance       = C["chance"]
-		CR.cooldown     = C["cooldown"]
-		CR.last_trigger = C["last_trigger"]
-		CR.trigger      = C["trigger"]
-		CR.effect       = C["effect"]
-		CR.effect_args  = C["effect_args"]
-		CR.admin        = C["admin"]
-		CR.reason       = C["reason"]
+		// already exists? update fields
+		if(M.curses[curse_name])
+			var/datum/modular_curse/existingC = M.curses[curse_name]
+			existingC.expires      = C["expires"]
+			existingC.chance       = C["chance"]
+			existingC.cooldown     = C["cooldown"]
+			existingC.last_trigger = C["last_trigger"]
+			existingC.trigger      = C["trigger"]
+			existingC.effect       = C["effect"]
+			existingC.effect_args  = C["effect_args"]
+			existingC.admin        = C["admin"]
+			existingC.reason       = C["reason"]
+			continue
 
-		M.curses[curse_name] = CR
+		// create NEW curse datum
+		var/datum/modular_curse/newC = new
+		newC.name         = curse_name
+		newC.expires      = C["expires"]
+		newC.chance       = C["chance"]
+		newC.cooldown     = C["cooldown"]
+		newC.last_trigger = C["last_trigger"]
+		newC.trigger      = C["trigger"]
+		newC.effect       = C["effect"]
+		newC.effect_args  = C["effect_args"]
+		newC.admin        = C["admin"]
+		newC.reason       = C["reason"]
+
+		M.curses[curse_name] = newC
 
 /proc/apply_curses_to_mob(mob/M, datum/mind/MN)
 	if(!M || !MN || !MN.curses)
@@ -486,8 +526,7 @@
 		//"nugget",
 		//"gib and spawn player controlled mob",
 		//"gib and reset body",
-		"gib",
-		"gib and explode"
+		"gib"
 	)
 
 	var/effect_proc = input(
