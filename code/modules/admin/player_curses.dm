@@ -17,7 +17,7 @@
 	var/mob/owner
 	var/list/signals = list()
 	var/obj/effect/proc_holder/spell/targeted/shapeshift/shapeshift
-	
+
 /datum/modular_curse/proc/attach_to_mob(mob/M)
 	owner = M
 
@@ -84,10 +84,16 @@
 	var/arg = TRUE
 	switch(effect)
 		if("buff or debuff")
-			var/debuff_id = effect_args["debuff_id"]
-			if(!debuff_id)
-				return
-			L.apply_status_effect(debuff_id)
+			spawn(0)
+				var/mob/living/carbon/human/H = L
+				var/debuff_id = effect_args["debuff_id"]
+				if(!debuff_id)
+					return
+				if (H.has_status_effect(text2path(debuff_id)))
+					arg = FALSE
+				else
+					H.remove_status_effect(debuff_id)
+					H.apply_status_effect(debuff_id, 10 SECONDS)
 		if("remove trait")
 			var/trait_id = effect_args["trait"]
 			if(!trait_id)
