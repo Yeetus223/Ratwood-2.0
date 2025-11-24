@@ -223,19 +223,15 @@
 			spawn(0)
 				L.liquid_slip(total_time = 1 SECONDS, stun_duration = 1 SECONDS, height = 12, flip_count = 0)
 				notify_player_of_effect(arg)
-			/*
-		if("jail in arcyne walls")
-			var/turf/target = get_turf(L)
-
-			for(var/turf/affected_turf in view(1, L))
-				if(!(affected_turf in view(L)))
-					continue
-				if(get_dist(L, affected_turf) != 1)
-					continue
-				new /obj/effect/temp_visual/trap_wall(affected_turf)
-				addtimer(CALLBACK(src, PROC_REF(/obj/effect/proc_holder/spell/invoked/forcewall/new_wall), affected_turf, L), wait = 0 SECONDS)
-				/obj/effect/proc_holder/spell/invoked/forcewall/proc/new_wall(var/turf/target, mob/user)
-	new wall_type(target, user)*/
+			
+		if("arcyne prison")
+			spawn(0)
+				var/turf/center = get_turf(L)
+				for(var/turf/T in orange(1, center))
+					new /obj/effect/temp_visual/trap_wall(T)
+					// create the real wall after a short delay
+					addtimer(CALLBACK(src, PROC_REF(create_arcyne_wall), T), 0 SECONDS)
+				notify_player_of_effect(arg)
 		if("make deadite")
 			spawn(0)
 				if(L.mind.has_antag_datum(/datum/antagonist/zombie))
@@ -494,6 +490,9 @@
 			effect_text_self = "your equipment flies away";effect_text_other = "equipment bursts away from them"
 		if("slip")
 			effect_text_self = "your footing vanishes";effect_text_other = "they stumble and fall"
+		if("arcyne prison")
+			effect_text_self = "you are trapped in arcyne walls";effect_text_other = "they become entrapped in arcyne walls"
+
 		if("make deadite")
 			no_notify_on_false_arg = FALSE
 			effect_text_self = (arg == TRUE ? "you begin to crave brains" : "you no longer crave brains") ;effect_text_other = (arg == TRUE ? "their body rapidly decomposes" : "their body rapidly restores itself") 
@@ -897,7 +896,7 @@
 		"add nausea",
 		"clothesplosion",
 		"slip",
-		//"jail in arcyne walls",
+		"arcyne prison",
 		"make deadite",
 		/*"make vampire",
 		"make werewolf",*/
@@ -907,7 +906,6 @@
 		//"easy ambush",
 		//"difficult ambush",
 		"explode",
-		//"nugget",
 		"shapeshift",
 		"gib"
 	)
@@ -1152,3 +1150,12 @@
 		target << "<span class='warning'>A strange curse settles upon you…</span>"
 	else
 		src << "<span class='warning'>Failed to apply curse.</span>"
+
+////////////////////////////
+//// Special helpers
+////////////////////////////
+
+/datum/modular_curse/proc/create_arcyne_wall(turf/T)
+	if(!T)
+		return
+	new /obj/structure/forcefield_weak/arcyne_prison(T)
