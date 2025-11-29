@@ -1281,6 +1281,18 @@
 	max_integrity = 150
 	max_blade_int = 180
 	smeltresult = /obj/item/ingot/steel
+	is_silver = TRUE
+
+/obj/item/rogueweapon/woodstaff/sojourner/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 50,\
+		added_int = 50,\
+		added_def = 2,\
+	)
 
 /obj/item/rogueweapon/woodstaff/quarterstaff
 	name = "wooden quarterstaff"

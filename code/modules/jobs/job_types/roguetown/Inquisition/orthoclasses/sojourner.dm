@@ -37,7 +37,7 @@
 	subclass_stashed_items = list(
 		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
 	)
-	extra_context = "This subclass has a unique spell, in the form of an 'arcyne barrier'. So long as it's active, the user is immune to magic, yet still capable of casting it."
+	extra_context = "This subclass has multiple unique spells, including one in the form of an 'arcyne barrier'. So long as it's active, the user is immune to magic, yet still capable of casting it."
 
 /datum/outfit/job/roguetown/sojourner
 	job_bitflag = BITFLAG_HOLY_WARRIOR
@@ -60,8 +60,8 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/stoneskin)
 		//Frost spells. Slowdown city. Hue city. Frigid. Or something.
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/snap_freeze)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/frostbolt)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/frostbite)//Used by Sojourners only.
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/ice_shard)//Used by Sojourners only.
 		//Finally, utility. Consider removing fetch, if fetch-slow is absurd. But that's the case for any mage.
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/forcewall/greater)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/fetch)
@@ -72,7 +72,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/cloth/naledi
 	neck = /obj/item/clothing/neck/roguetown/psicross/g //Naledians covet gold far more than the Orthodoxists cover silver. Emphasizes their nature as 'visitors', more-so than anything else.
 	id = /obj/item/clothing/ring/signet
-	r_hand = /obj/item/rogueweapon/woodstaff/sojourner//A very questionable spear. Can't be blessed. No pen. Middling CDR on cast.
+	r_hand = /obj/item/rogueweapon/woodstaff/sojourner//A very questionable spear. No pen. Middling CDR on cast.
 	shoes = /obj/item/clothing/shoes/roguetown/boots/psydonboots
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq
 	backl = /obj/item/storage/backpack/rogue/satchel/otavan
