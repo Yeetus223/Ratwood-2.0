@@ -966,8 +966,6 @@
 	icon_state = "clickcd"
 
 /datum/status_effect/debuff/crit_resistance_cd
-<<<<<<< HEAD
-=======
 
 /datum/status_effect/debuff/baited
 	id = "bait"
@@ -1079,7 +1077,6 @@
 	desc = "I cannot take another action."
 	icon_state = "clickcd"
 
->>>>>>> 357ec6691 (all the code)
 /datum/status_effect/debuff/crit_resistance_cd
 	id = "crit_resist_cd"
 	duration = CRIT_RESISTANCE_TIMER_CD

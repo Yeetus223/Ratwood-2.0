@@ -171,10 +171,8 @@
 	
 	// FREE LANGUAGE SLOT
 	var/datum/language/free_lang
-	var/free_lang_name = "None"
 	if(ispath(extra_language, /datum/language))
 		free_lang = new extra_language()
-		free_lang_name = free_lang.name
 	
 	html += "<div class='language-slot' style='border-color: #4CAF50;'>"
 	html += "<div class='slot-header'>"

@@ -85,7 +85,11 @@
 		to_chat(L, "*----*")
 		if(ishuman(usr))
 			var/mob/living/carbon/human/M = usr
-			if(M.charflaw)
+			if(length(M.vices))
+				for(var/datum/charflaw/vice in M.vices)
+					to_chat(M, "<span class='info'><small>[vice.desc]</small></span>")
+				to_chat(M, "*----*")
+			else if(M.charflaw)
 				to_chat(M, "<span class='info'>[M.charflaw.desc]</span>")
 				to_chat(M, "*----*")
 			if(M.mind)
@@ -1597,48 +1601,30 @@
 
 /atom/movable/screen/stress/update_icon()
 	cut_overlays()
-	var/state2use = "mood_idle"
+	var/state2use = "stress1"
 	if(ishuman(usr))
 		var/mob/living/carbon/human/H = usr
-		//General stress moodlets
-		var/stress_amt = H.get_stress_amount()
-		switch(stress_amt)
-			if(1 to 4)
-				state2use = "stress"
-			if(5 to 14)
+		if(!HAS_TRAIT(H, TRAIT_NOMOOD))
+			var/stress_amt = H.get_stress_amount()
+			if(stress_amt > 0)
 				state2use = "stress2"
-			if(5 to 24)
+			if(stress_amt >= 5)
 				state2use = "stress3"
-			if(25 to 999)
+			if(stress_amt >= 15)
 				state2use = "stress4"
-			if(-4 to -1)
-				state2use = "peace"
-			if(-9 to -5)
-				state2use = "peace2"
-			if(-20 to -10)
-				state2use = "peace3"
-			if(-999 to -21)
-				state2use = "mood_nirvana"
-
-		//Regular overrides for stress
+			if(stress_amt >= 25)
+				state2use = "stress5"
 		if(H.has_status_effect(/datum/status_effect/buff/drunk))
-			state2use = "mood_drunkorhigh"
+			state2use = "mood_drunk"
 		if(H.has_status_effect(/datum/status_effect/buff/druqks))
-			state2use = "mood_drunkorhigh"
-		if(H.has_status_effect(/datum/status_effect/buff/starsugar))
-			state2use = "mood_starsugar"
-		if(H.has_status_effect(/datum/status_effect/buff/bloodrage))
-			state2use = "mood_ult"
-		
-		//We go down a janky list of exceptions for total overrides
-		if(HAS_TRAIT(H, TRAIT_NOMOOD))
-			state2use = "mood_hopeless"
-		else if(H.stat == DEAD)
+			state2use = "mood_drunk"
+		if(H.InFullCritical())
+			state2use = "stress4"
+		if(H.mind)
+			if(H.mind.has_antag_datum(/datum/antagonist/zombie))
+				state2use = "stress4"
+		if(H.stat == DEAD)
 			state2use = "mood_dead"
-		else if(H.mind?.has_antag_datum(/datum/antagonist/zombie))
-			state2use = "mood_zombidle"
-		else if(H.mind?.has_antag_datum(/datum/antagonist/lich))
-			state2use = "mood_boneidle"
 	add_overlay(state2use)
 
 
@@ -1648,7 +1634,11 @@
 	if(ishuman(usr))
 		var/mob/living/carbon/human/M = usr
 		if(modifiers["left"])
-			if(M.charflaw)
+			if(length(M.vices))
+				to_chat(M, "*----*")
+				for(var/datum/charflaw/vice in M.vices)
+					to_chat(M, span_info("<small>[vice.desc]</small>"))
+			else if(M.charflaw)
 				to_chat(M, "*----*")
 				to_chat(M, span_info("[M.charflaw.desc]"))
 			to_chat(M, "*--------*")

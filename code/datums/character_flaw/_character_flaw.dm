@@ -2,29 +2,29 @@
 GLOBAL_LIST_INIT(character_flaws, list(
 	"Alcoholic"=/datum/charflaw/addiction/alcoholic,
 	"Devout Follower"=/datum/charflaw/addiction/godfearing,
-	"Colorblind"=/datum/charflaw/colorblind,
+	"Colorblind (+1 TRI)"=/datum/charflaw/colorblind,
 	"Smoker"=/datum/charflaw/addiction/smoker,
 	"Junkie"=/datum/charflaw/addiction/junkie,
-	"Unintelligible"=/datum/charflaw/unintelligible,
+	"Unintelligible (+1 TRI)"=/datum/charflaw/unintelligible,
 	"Greedy"=/datum/charflaw/greedy,
-	"Narcoleptic"=/datum/charflaw/narcoleptic,
+	"Narcoleptic (+1 TRI)"=/datum/charflaw/narcoleptic,
 	"Nymphomaniac"=/datum/charflaw/addiction/lovefiend,
 	"Sadist"=/datum/charflaw/addiction/sadist,
 	"Masochist"=/datum/charflaw/addiction/masochist,
 	"Paranoid"=/datum/charflaw/paranoid,
 	"Clingy"=/datum/charflaw/clingy,
 	"Isolationist"=/datum/charflaw/isolationist,
-	"Bad Sight"=/datum/charflaw/badsight,
-	"Cyclops (R)"=/datum/charflaw/noeyer,
-	"Cyclops (L)"=/datum/charflaw/noeyel,
-	"Blindness"=/datum/charflaw/noeyeall,
-	"Wood Arm (R)"=/datum/charflaw/limbloss/arm_r,
-	"Wood Arm (L)"=/datum/charflaw/limbloss/arm_l,
-	"Sleepless"=/datum/charflaw/sleepless,
-	"Mute"=/datum/charflaw/mute,
-	"Critical Weakness"=/datum/charflaw/critweakness,
+	"Bad Sight (+1 TRI)"=/datum/charflaw/badsight,
+	"Cyclops (R) (+1 TRI)"=/datum/charflaw/noeyer,
+	"Cyclops (L) (+1 TRI)"=/datum/charflaw/noeyel,
+	"Blindness (+1 TRI)"=/datum/charflaw/noeyeall,
+	"Wood Arm (R) (+1 TRI)"=/datum/charflaw/limbloss/arm_r,
+	"Wood Arm (L) (+1 TRI)"=/datum/charflaw/limbloss/arm_l,
+	"Sleepless (+1 TRI)"=/datum/charflaw/sleepless,
+	"Mute (+1 TRI)"=/datum/charflaw/mute,
+	"Critical Weakness (+1 TRI)"=/datum/charflaw/critweakness,
 	"Silver Weakness"=/datum/charflaw/silverweakness,
-	"Hunted"=/datum/charflaw/hunted,
+	"Hunted (+1 TRI)"=/datum/charflaw/hunted,
 	/datum/charflaw/mind_broken::name = /datum/charflaw/mind_broken,
 	"Random or No Flaw"=/datum/charflaw/randflaw,
 	"No Flaw (-3 TRIUMPHS)"=/datum/charflaw/noflaw,
@@ -150,6 +150,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 
 /datum/charflaw/badsight/proc/apply_reading_skill(mob/living/carbon/human/H)
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	H.adjust_triumphs(1)
 
 /datum/charflaw/paranoid
 	name = "Paranoid"
@@ -251,6 +252,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	var/obj/item/bodypart/head/head = H.get_bodypart(BODY_ZONE_HEAD)
 	head?.add_wound(/datum/wound/facial/eyes/right/permanent)
 	H.update_fov_angles()
+	H.adjust_triumphs(1)
 
 /datum/charflaw/noeyel
 	name = "Cyclops (L)"
@@ -266,6 +268,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	var/obj/item/bodypart/head/head = H.get_bodypart(BODY_ZONE_HEAD)
 	head?.add_wound(/datum/wound/facial/eyes/left/permanent)
 	H.update_fov_angles()
+	H.adjust_triumphs(1)
 
 /datum/charflaw/noeyeall
 	name = "Blindness"
@@ -282,6 +285,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	head?.add_wound(/datum/wound/facial/eyes/left/permanent)
 	head?.add_wound(/datum/wound/facial/eyes/right/permanent)
 	H.update_fov_angles()
+	H.adjust_triumphs(1)
 
 /datum/charflaw/colorblind
 	name = "Colorblind"
@@ -290,6 +294,9 @@ GLOBAL_LIST_INIT(character_flaws, list(
 /datum/charflaw/colorblind/on_mob_creation(mob/user)
 	..()
 	user.add_client_colour(/datum/client_colour/monochrome)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.adjust_triumphs(1)
 
 /datum/charflaw/hunted
 	name = "Hunted"
@@ -297,6 +304,12 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	\nTHIS IS A DIFFICULT FLAW, YOU WILL BE HUNTED BY ASSASSINS AND HAVE ASSASINATION ATTEMPTS MADE AGAINST YOU WITHOUT ANY ESCALATION. \
 	EXPECT A MORE DIFFICULT EXPERIENCE. PLAY AT YOUR OWN RISK."
 	var/logged = FALSE
+
+/datum/charflaw/hunted/on_mob_creation(mob/user)
+	..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.adjust_triumphs(1)
 
 /datum/charflaw/hunted/flaw_on_life(mob/user)
 	if(!ishuman(user))
@@ -321,6 +334,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 		return
 	user.remove_language(/datum/language/common)
 	user.adjust_skillrank(/datum/skill/misc/reading, -6, TRUE)
+	user.adjust_triumphs(1)
 
 /datum/charflaw/greedy
 	name = "Greedy"
@@ -409,6 +423,9 @@ GLOBAL_LIST_INIT(character_flaws, list(
 /datum/charflaw/narcoleptic/on_mob_creation(mob/user)
 	ADD_TRAIT(user, TRAIT_FASTSLEEP, "[type]")
 	reset_timer()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.adjust_triumphs(1)
 
 /datum/charflaw/narcoleptic/proc/reset_timer()
 	do_sleep = FALSE
@@ -470,6 +487,9 @@ GLOBAL_LIST_INIT(character_flaws, list(
 
 /datum/charflaw/sleepless/on_mob_creation(mob/user)
 	ADD_TRAIT(user, TRAIT_NOSLEEP, TRAIT_GENERIC)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.adjust_triumphs(1)
 
 /datum/charflaw/mute
 	name = "Mute"
@@ -477,6 +497,9 @@ GLOBAL_LIST_INIT(character_flaws, list(
 
 /datum/charflaw/mute/on_mob_creation(mob/user)
 	ADD_TRAIT(user, TRAIT_PERMAMUTE, TRAIT_GENERIC)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.adjust_triumphs(1)
 
 /datum/charflaw/critweakness
 	name = "Critical Weakness"
@@ -484,6 +507,9 @@ GLOBAL_LIST_INIT(character_flaws, list(
 
 /datum/charflaw/critweakness/on_mob_creation(mob/user)
 	ADD_TRAIT(user, TRAIT_CRITICAL_WEAKNESS, TRAIT_GENERIC)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.adjust_triumphs(1)
 
 /datum/charflaw/silverweakness
 	name = "Silver Weakness"

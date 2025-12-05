@@ -418,6 +418,25 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		charflaw = pick(GLOB.character_flaws)
 		charflaw = GLOB.character_flaws[charflaw]
 		charflaw = new charflaw()
+	
+	// Load new vice system
+	var/vice1_type, vice2_type, vice3_type, vice4_type, vice5_type
+	S["vice1"] >> vice1_type
+	S["vice2"] >> vice2_type
+	S["vice3"] >> vice3_type
+	S["vice4"] >> vice4_type
+	S["vice5"] >> vice5_type
+	
+	if(vice1_type)
+		vice1 = new vice1_type()
+	if(vice2_type)
+		vice2 = new vice2_type()
+	if(vice3_type)
+		vice3 = new vice3_type()
+	if(vice4_type)
+		vice4 = new vice4_type()
+	if(vice5_type)
+		vice5 = new vice5_type()
 
 /datum/preferences/proc/_load_culinary_preferences(S)
 	var/list/loaded_culinary_preferences
@@ -857,6 +876,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["randomise"]			, randomise)
 	WRITE_FILE(S["species"]				, pref_species.name)
 	WRITE_FILE(S["charflaw"]			, charflaw.type)
+	// Save new vice system
+	WRITE_FILE(S["vice1"], vice1?.type)
+	WRITE_FILE(S["vice2"], vice2?.type)
+	WRITE_FILE(S["vice3"], vice3?.type)
+	WRITE_FILE(S["vice4"], vice4?.type)
+	WRITE_FILE(S["vice5"], vice5?.type)
 	WRITE_FILE(S["feature_mcolor"]		, features["mcolor"])
 	WRITE_FILE(S["feature_mcolor2"]		, features["mcolor2"])
 	WRITE_FILE(S["feature_mcolor3"]		, features["mcolor3"])

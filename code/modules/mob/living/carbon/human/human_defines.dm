@@ -151,7 +151,8 @@
 	/// Assoc list of culinary preferences of the mob
 	var/list/culinary_preferences = list()
 
-	var/datum/charflaw/charflaw
+	var/datum/charflaw/charflaw  // Legacy single vice (kept for compatibility)
+	var/list/datum/charflaw/vices = list()  // Multiple vices system
 
 	// curse list and cooldown
 	var/list/curses = list()

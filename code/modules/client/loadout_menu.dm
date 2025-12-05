@@ -216,6 +216,7 @@
 			var/obj/item/sample = current_item.path
 			var/icon_file = initial(sample.icon)
 			var/icon_state = initial(sample.icon_state)
+			var/item_desc = initial(sample.desc)
 			
 			html += "<div class='item-display'>"
 			html += "<div class='item-icon'>"
@@ -228,7 +229,7 @@
 			html += "</div>"
 			html += "<div class='item-info'>"
 			html += "<div class='item-name'>[custom_name ? custom_name : current_item.name]</div>"
-			html += "<div class='item-desc'>[custom_desc ? custom_desc : current_item.desc]</div>"
+			html += "<div class='item-desc'>[custom_desc ? custom_desc : (item_desc ? item_desc : current_item.desc)]</div>"
 			
 			if(custom_name || custom_desc)
 				html += "<div class='custom-text'>✎ Customized</div>"

@@ -668,7 +668,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/clothing/cloak/apron/cook
 
 /datum/loadout_item/black_cloak
-	name = "Black Cloak"
+	name = "Fur Overcloak"
 	path = /obj/item/clothing/cloak/black_cloak
 
 /datum/loadout_item/tribal_cloak
@@ -676,7 +676,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/clothing/cloak/tribal
 
 /datum/loadout_item/battlenun_cloak
-	name = "Battle Nun Cloak"
+	name = "Nun Cloak"
 	path = /obj/item/clothing/cloak/battlenun
 
 /datum/loadout_item/hierophant_cloak
@@ -692,7 +692,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/clothing/cloak/eastcloak1
 
 /datum/loadout_item/kazengun_cloak
-	name = "Kazengun Cloak"
+	name = "Jinbaori"
 	path = /obj/item/clothing/cloak/kazengun
 
 // SHOES
@@ -915,39 +915,34 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/tri_scythe
 	name = "Peasant Scythe"
 	path = /obj/item/rogueweapon/scythe
-	triumph_cost = 3
+	triumph_cost = 5
 
 // CLOTHING - DRESSES & ROBES
 /datum/loadout_item/tri_princess_dress
 	name = "Princess Dress"
 	path = /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess
-	triumph_cost = 3
+	triumph_cost = 4
 
 /datum/loadout_item/tri_royal_dress
 	name = "Royal Dress"
 	path = /obj/item/clothing/suit/roguetown/shirt/dress/royal
-	triumph_cost = 3
+	triumph_cost = 4
 
 /datum/loadout_item/tri_royal_sleeves
 	name = "Royal Sleeves"
 	path = /obj/item/clothing/wrists/roguetown/royalsleeves
-	triumph_cost = 3
+	triumph_cost = 4
 
 /datum/loadout_item/tri_lady_cloak
 	name = "Lady's Cloak"
 	path = /obj/item/clothing/cloak/lordcloak/ladycloak
-	triumph_cost = 3
+	triumph_cost = 4
 
 // CLOTHING - HEADWEAR
 /datum/loadout_item/tri_circlet
 	name = "Circlet"
 	path = /obj/item/clothing/head/roguetown/circlet/loadout
-	triumph_cost = 3
-
-/datum/loadout_item/tri_paddedcap
-	name = "Padded Cap"
-	path = /obj/item/clothing/head/roguetown/paddedcap
-	triumph_cost = 3
+	triumph_cost = 4
 
 /datum/loadout_item/tri_volfhelm
 	name = "Volf Helm"
@@ -963,47 +958,29 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/tri_noble_amulet
 	name = "Noble Amulet"
 	path = /obj/item/clothing/neck/roguetown/ornateamulet/noble
-	triumph_cost = 3
-
-/datum/loadout_item/tri_shalal_neck
-	name = "Shalal Scarf"
-	path = /obj/item/clothing/neck/roguetown/shalal
-	triumph_cost = 3
+	triumph_cost = 4
 
 /datum/loadout_item/tri_shell_bracelet
 	name = "Shell Bracelet"
 	path = /obj/item/clothing/neck/roguetown/psicross/shell/bracelet
-	triumph_cost = 3
+	triumph_cost = 2
 
 /datum/loadout_item/tri_shell_necklace
 	name = "Shell Necklace"
 	path = /obj/item/clothing/neck/roguetown/psicross/shell
-	triumph_cost = 3
+	triumph_cost = 2
 
 // CLOTHING - ARMOR
 /datum/loadout_item/tri_regen_skin
 	name = "Regenerating Skin"
 	path = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/loadout
-	triumph_cost = 3
+	triumph_cost = 5
 
-//─────────────────────────────────────────────────────────────
-// 4 TRIUMPH - Copper/Bronze Tier
-//─────────────────────────────────────────────────────────────
 
 // BLUNT WEAPONS
 /datum/loadout_item/tri_cudgel
 	name = "Cudgel"
 	path = /obj/item/rogueweapon/mace/cudgel
-	triumph_cost = 4
-
-/datum/loadout_item/tri_mace_bronze
-	name = "Bronze Mace"
-	path = /obj/item/rogueweapon/mace/bronze
-	triumph_cost = 4
-
-/datum/loadout_item/tri_bronze_knuckles
-	name = "Bronze Knuckles"
-	path = /obj/item/rogueweapon/knuckles/bronzeknuckles
 	triumph_cost = 4
 
 // AXES
@@ -1012,88 +989,36 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/rogueweapon/stoneaxe/handaxe/copper
 	triumph_cost = 4
 
-/datum/loadout_item/tri_bronze_axe
-	name = "Bronze Axe"
-	path = /obj/item/rogueweapon/stoneaxe/woodcut/bronze
-	triumph_cost = 4
-
 // SWORDS
-/datum/loadout_item/tri_gladius
-	name = "Gladius"
-	path = /obj/item/rogueweapon/sword/short/gladius
-	triumph_cost = 4
-
 /datum/loadout_item/tri_messer_copper
 	name = "Copper Messer"
 	path = /obj/item/rogueweapon/sword/short/messer/copper
 	triumph_cost = 4
 
-/datum/loadout_item/tri_bronze_sword
-	name = "Bronze Sword"
-	path = /obj/item/rogueweapon/sword/bronze
-	triumph_cost = 4
-
-// DAGGERS & KNIVES
 /datum/loadout_item/tri_huntingknife_copper
 	name = "Copper Hunting Knife"
 	path = /obj/item/rogueweapon/huntingknife/copper
 	triumph_cost = 4
 
-/datum/loadout_item/tri_huntingknife_bronze
-	name = "Bronze Hunting Knife"
-	path = /obj/item/rogueweapon/huntingknife/bronze
-	triumph_cost = 4
-
-/datum/loadout_item/tri_bronze_katar
-	name = "Bronze Katar"
-	path = /obj/item/rogueweapon/katar/bronze
-	triumph_cost = 4
-
-// POLEARMS & SPEARS
 /datum/loadout_item/tri_copper_spear
 	name = "Copper Spear"
 	path = /obj/item/rogueweapon/spear/stone/copper
 	triumph_cost = 4
 
-/datum/loadout_item/tri_bronze_spear
-	name = "Bronze Spear"
-	path = /obj/item/rogueweapon/spear/bronze
-	triumph_cost = 4
-
-// WHIPS
 /datum/loadout_item/tri_whip
 	name = "Whip"
 	path = /obj/item/rogueweapon/whip
 	triumph_cost = 4
 
-// ARMOR
-/datum/loadout_item/tri_studded_leather
-	name = "Studded Leather Armor"
-	path = /obj/item/clothing/suit/roguetown/armor/leather/studded
-	triumph_cost = 4
-
 //─────────────────────────────────────────────────────────────
-// 6 TRIUMPH - Simple Iron Weapons
+// 6 TRIUMPH - Simple Iron Tier Weapons & Armor
 //─────────────────────────────────────────────────────────────
 
-// BLUNT WEAPONS
-/datum/loadout_item/tri_mace_iron
-	name = "Iron Mace"
-	path = /obj/item/rogueweapon/mace
-	triumph_cost = 6
-
-/datum/loadout_item/tri_flail_iron
-	name = "Iron Flail"
-	path = /obj/item/rogueweapon/flail
-	triumph_cost = 6
-
-// AXES
 /datum/loadout_item/tri_axe_iron
 	name = "Iron Axe"
 	path = /obj/item/rogueweapon/stoneaxe/woodcut
 	triumph_cost = 6
 
-// SWORDS
 /datum/loadout_item/tri_sword_short_iron
 	name = "Iron Shortsword"
 	path = /obj/item/rogueweapon/sword/short/iron
@@ -1109,7 +1034,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/rogueweapon/sword/short/messer/iron
 	triumph_cost = 6
 
-// DAGGERS & KNIVES
 /datum/loadout_item/tri_huntingknife_iron
 	name = "Iron Hunting Knife"
 	path = /obj/item/rogueweapon/huntingknife
@@ -1120,21 +1044,14 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/rogueweapon/huntingknife/idagger
 	triumph_cost = 6
 
-// POLEARMS & SPEARS
 /datum/loadout_item/tri_spear_iron
 	name = "Iron Spear"
 	path = /obj/item/rogueweapon/spear
 	triumph_cost = 6
 
-// ARMOR
 /datum/loadout_item/tri_chainmail_iron
-	name = "Iron Chainmail"
-	path = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
-	triumph_cost = 6
-
-/datum/loadout_item/tri_haubergeon_iron
 	name = "Iron Haubergeon"
-	path = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron
+	path = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
 	triumph_cost = 6
 
 /datum/loadout_item/tri_chaingloves
@@ -1148,44 +1065,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	triumph_cost = 6
 
 //─────────────────────────────────────────────────────────────
-// 9 TRIUMPH - Militia/Improvised Weapons & Special Daggers
-//─────────────────────────────────────────────────────────────
-
-// BLUNT WEAPONS
-/datum/loadout_item/tri_militia_goedendag
-	name = "Militia Goedendag"
-	path = /obj/item/rogueweapon/woodstaff/militia
-	triumph_cost = 9
-
-/datum/loadout_item/tri_militia_warpick
-	name = "Militia Warpick"
-	path = /obj/item/rogueweapon/pick/militia
-	triumph_cost = 9
-
-// AXES
-/datum/loadout_item/tri_militia_waraxe
-	name = "Militia War Axe"
-	path = /obj/item/rogueweapon/greataxe/militia
-	triumph_cost = 9
-
-// DAGGERS & KNIVES
-/datum/loadout_item/tri_iron_dagger
-	name = "Iron Dagger"
-	path = /obj/item/rogueweapon/huntingknife/idagger
-	triumph_cost = 9
-
-/datum/loadout_item/tri_navaja
-	name = "Navaja"
-	path = /obj/item/rogueweapon/huntingknife/idagger/navaja
-	triumph_cost = 9
-
-// POLEARMS & SPEARS
-/datum/loadout_item/tri_militia_spear
-	name = "Militia Spear"
-	path = /obj/item/rogueweapon/spear/militia
-	triumph_cost = 9
-
-//─────────────────────────────────────────────────────────────
 // 10 TRIUMPH - Lord's Cloak
 //─────────────────────────────────────────────────────────────
 
@@ -1194,33 +1073,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Lord's Cloak"
 	path = /obj/item/clothing/cloak/lordcloak
 	triumph_cost = 10
-
-//─────────────────────────────────────────────────────────────
-// 11 TRIUMPH - Bronze Trident
-//─────────────────────────────────────────────────────────────
-
-// POLEARMS & SPEARS
-/datum/loadout_item/tri_bronze_trident
-	name = "Bronze Trident"
-	path = /obj/item/rogueweapon/spear/trident
-	triumph_cost = 11
-
-//─────────────────────────────────────────────────────────────
-// 15 TRIUMPH - Greatweapons
-//─────────────────────────────────────────────────────────────
-
-// AXES
-/datum/loadout_item/tri_greataxe
-	name = "Iron Greataxe"
-	path = /obj/item/rogueweapon/greataxe
-	triumph_cost = 15
-
-// SWORDS
-/datum/loadout_item/tri_greatsword
-	name = "Iron Greatsword"
-	path = /obj/item/rogueweapon/greatsword/iron
-	triumph_cost = 15
-
 
 //==========================
 //Donator Section

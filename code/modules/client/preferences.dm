@@ -160,6 +160,12 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/nickname = "Please Change Me"
 	var/highlight_color = "#FF0000"
 	var/datum/charflaw/charflaw
+	// Multiple vice selection (up to 5, at least 1 required)
+	var/datum/charflaw/vice1
+	var/datum/charflaw/vice2
+	var/datum/charflaw/vice3
+	var/datum/charflaw/vice4
+	var/datum/charflaw/vice5
 
 	var/static/default_cmusic_type = /datum/combat_music/default
 	var/datum/combat_music/combat_music
@@ -505,7 +511,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<b>Second Virtue:</b> <a href='?_src_=prefs;preference=virtuetwo;task=input'>[virtuetwo]</a><BR>"
 			else
 				virtuetwo = GLOB.virtues[/datum/virtue/none]
-			dat += "<b>Vice:</b> <a href='?_src_=prefs;preference=charflaw;task=input'>[charflaw]</a><BR>"
+			dat += "<b>Vices:</b> <a href='?_src_=prefs;preference=vices_menu;task=input'>Configure Vices</a><BR>"
 			var/datum/faith/selected_faith = GLOB.faithlist[selected_patron?.associated_faith]
 			dat += "<b>Faith:</b> <a href='?_src_=prefs;preference=faith;task=input'>[selected_faith?.name || "FUCK!"]</a><BR>"
 			dat += "<b>Patron:</b> <a href='?_src_=prefs;preference=patron;task=input'>[selected_patron?.name || "FUCK!"]</a><BR>"
@@ -1011,12 +1017,14 @@ GLOBAL_LIST_EMPTY(chosen_names)
 						name += virtuetwo.name
 					else
 						name = virtuetwo.name
-				if(charflaw.type in job.vice_restrictions)
-					if(name)
-						name += ", "
-						name += charflaw.name
-					else
-						name += charflaw.name
+				// Check all vices
+				for(var/datum/charflaw/vice in list(vice1, vice2, vice3, vice4, vice5, charflaw))
+					if(vice?.type in job.vice_restrictions)
+						if(name)
+							name += ", "
+							name += vice.name
+						else
+							name = vice.name
 				if(!isnull(name))
 					HTML += "<font color='#a561a5'>[used_name] (Disallowed by Virtues / Vice: [name])</font></td> <td> </td></tr>"
 			if(length(job.virtue_restrictions))
@@ -1033,8 +1041,13 @@ GLOBAL_LIST_EMPTY(chosen_names)
 					HTML += "<font color='#a59461'>[used_name] (Disallowed by Virtue: [name])</font></td> <td> </td></tr>"
 					continue
 			if(length(job.vice_restrictions))
-				if(charflaw.type in job.vice_restrictions)
-					HTML += "<font color='#a56161'>[used_name] (Disallowed by Vice: [charflaw.name])</font></td> <td> </td></tr>"
+				var/list/restricted_vices = list()
+				// Check all vices
+				for(var/datum/charflaw/vice in list(vice1, vice2, vice3, vice4, vice5, charflaw))
+					if(vice?.type in job.vice_restrictions)
+						restricted_vices += vice.name
+				if(length(restricted_vices))
+					HTML += "<font color='#a56161'>[used_name] (Disallowed by Vice: [restricted_vices.Join(", ")])</font></td> <td> </td></tr>"
 					continue
 			var/job_unavailable = JOB_AVAILABLE
 			if(isnewplayer(parent?.mob))
@@ -2224,6 +2237,9 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						charflaw = C
 						if(charflaw.desc)
 							to_chat(user, "<span class='info'>[charflaw.desc]</span>")
+				
+				if("vices_menu")
+					open_vices_menu(user)
 
 				if("race_bonus_select")
 					if(length(pref_species.custom_selection))
@@ -2840,9 +2856,23 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 	character.jumpsuit_style = jumpsuit_style
 
-	if(charflaw)
+	// Apply multiple vices system
+	character.vices = list()
+	for(var/i = 1 to 5)
+		var/datum/charflaw/vice = vars["vice[i]"]
+		if(vice)
+			var/datum/charflaw/new_vice = new vice.type()
+			character.vices += new_vice
+			new_vice.on_mob_creation(character)
+			// Set first vice as the legacy charflaw for compatibility
+			if(i == 1)
+				character.charflaw = new_vice
+	
+	// Legacy single vice support (if new system not used)
+	if(!length(character.vices) && charflaw)
 		character.charflaw = new charflaw.type()
 		character.charflaw.on_mob_creation(character)
+		character.vices += character.charflaw
 
 	character.dna.real_name = character.real_name
 

@@ -108,4 +108,5 @@
 
 
 /obj/item/clothing/suit/roguetown/armor/regenerating/skin/loadout
+	desc = "A flexible, leathery skin that slowly regenerates from damage over time. However it offers only minimal protection and you can't take it off."
 	armor = ARMOR_PADDED_BAD
