@@ -21,9 +21,9 @@
 // Wildborn Pack: Hunter's Apprentice + Forester + Woodwalker
 // For true children of the forest who are one with nature
 /datum/virtue/pack/wildborn
-	name = "Wildborn (-6 TRI)"
+	name = "Wildborn (-10 TRI)"
 	desc = "The forest is not just your home - it IS you. Born and raised beneath the canopy, you move through the wilderness as silently as the wind, hunt with practiced ease, and gather the forest's bounty effortlessly. You are a true child of nature."
-	triumph_cost = 6
+	triumph_cost = 10
 	granted_virtues = list(
 		/datum/virtue/utility/hunter,
 		/datum/virtue/utility/forester,
@@ -68,9 +68,9 @@
 // Master Craftsman Pack: Blacksmith + Artificer + Miner
 // For those dedicated to working with metal, stone, and construction
 /datum/virtue/pack/mastercraftsman
-	name = "Master Craftsman (-6 TRI)"
+	name = "Master Craftsman (-10 TRI)"
 	desc = "I am a polymath of the forge and workshop. From mining ore to smelting ingots, forging weapons to building structures - I have mastered the entire chain of creation. My hands shape the world itself."
-	triumph_cost = 6
+	triumph_cost = 10
 	granted_virtues = list(
 		/datum/virtue/utility/blacksmith,
 		/datum/virtue/utility/artificer,
@@ -84,9 +84,9 @@
 // Traveling Scholar Pack: Linguist + Rich and Shrewd + Equestrian
 // For worldly scholars who have traveled extensively and accumulated wealth and knowledge
 /datum/virtue/pack/travelingscholar
-	name = "Traveling Scholar (-6 TRI)"
+	name = "Traveling Scholar (-8 TRI)"
 	desc = "My travels across distant lands have made me wealthy in both coin and wisdom. I speak many tongues, understand the value of all things, and ride with practiced ease. The world is my library, and every road teaches me something new."
-	triumph_cost = 6
+	triumph_cost = 8
 	granted_virtues = list(
 		/datum/virtue/utility/linguist,
 		/datum/virtue/items/rich,
@@ -100,9 +100,9 @@
 // Devoted Healer Pack: Physician + Tailor + Devotee
 // For those who mend both flesh and fabric with equal care, guided by divine faith
 /datum/virtue/pack/devotedhealer
-	name = "Devoted Healer (-6 TRI)"
+	name = "Devoted Healer (-8 TRI)"
 	desc = "My calling is to mend what is broken - whether flesh torn by blade or fabric torn by life. Through my devotion to the divine, I channel sacred power to heal. I am equally skilled with needle and thread as I am with poultice and prayer."
-	triumph_cost = 6
+	triumph_cost = 8
 	granted_virtues = list(
 		/datum/virtue/utility/physician,
 		/datum/virtue/utility/tailor,
@@ -115,9 +115,9 @@
 
 // Scrappy Survivor Pack: Cunning Provisioner + Forester + Feral Appetite
 /datum/virtue/pack/scrappysurvivor
-	name = "Scrappy Survivor (-6 TRI)"
+	name = "Scrappy Survivor (-8 TRI)"
 	desc = "I've lived through hard times - poverty, famine, or exile taught me to make do with what I have. I can fish, farm, forage, and most importantly, I can stomach anything. Spoiled rations? Raw meat? Doesn't matter - I'll eat it and keep going."
-	triumph_cost = 6
+	triumph_cost = 8
 	granted_virtues = list(
 		/datum/virtue/utility/granary,
 		/datum/virtue/utility/forester,
@@ -130,9 +130,9 @@
 
 // High Society Pack: Nobility + Socialite
 /datum/virtue/pack/highsociety
-	name = "High Society (-6 TRI)"
+	name = "High Society (-7 TRI)"
 	desc = "I was born into privilege and raised in the finest circles. Noble blood runs through my veins, I read the emotions of others with ease, and my charm opens every door. Wealth, beauty, and status are my birthright."
-	triumph_cost = 6
+	triumph_cost = 7
 	granted_virtues = list(
 		/datum/virtue/utility/noble,
 		/datum/virtue/utility/socialite
@@ -143,9 +143,9 @@
 
 // Trusted Housekeeper Pack: Resident + Cunning Provisioner
 /datum/virtue/pack/housekeeper
-	name = "Trusted Housekeeper (-6 TRI)"
+	name = "Trusted Housekeeper (-3 TRI)"
 	desc = "I've served the households of this city for years - cooking, cleaning, and managing provisions. I know every street, have a home here, and my skills in the kitchen are unmatched. The city trusts me, and I know how to make do."
-	triumph_cost = 6
+	triumph_cost = 3
 	granted_virtues = list(
 		/datum/virtue/utility/resident,
 		/datum/virtue/utility/granary

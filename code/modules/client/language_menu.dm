@@ -266,8 +266,7 @@
 				/datum/language/otavan,
 				/datum/language/aavnic,
 				/datum/language/merar,
-				/datum/language/thievescant,
-				/datum/language/beast
+				/datum/language/thievescant/signlanguage
 			)
 			var/list/choices = list("None")
 			for(var/language in selectable_languages)
@@ -313,8 +312,7 @@
 					/datum/language/otavan,
 					/datum/language/aavnic,
 					/datum/language/merar,
-					/datum/language/thievescant,
-					/datum/language/beast
+					/datum/language/thievescant/signlanguage
 				)
 				
 				var/list/choices = list("None")
