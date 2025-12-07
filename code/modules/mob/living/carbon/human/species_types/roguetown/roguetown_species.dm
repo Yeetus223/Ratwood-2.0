@@ -46,7 +46,7 @@
 		if("Kazengun accent")
 			return strings("kazengun_replacement.json", type, convert_HTML = TRUE)
 		if("Xinyi accent")
-			return strings("xinyi_replcement.json", type, convert_HTML = TRUE)
+			return strings("xinyi_replacement.json", type, convert_HTML = TRUE)
 		if("Pui-Maen accent")
 			return strings("puimaen_replacement.json", type, convert_HTML = TRUE)
 		if("Avar accent")
