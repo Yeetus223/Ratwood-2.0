@@ -119,6 +119,49 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	// 0 = character settings, 1 = game preferences
 	var/current_tab = 0
 
+// Point-buy system helpers
+// Base points available to every character
+/datum/preferences/proc/get_base_points()
+	return 10
+
+// Points gained from selected vices (+1 per selected vice)
+/datum/preferences/proc/get_vice_points()
+	var/points = 0
+	for(var/i = 1 to 5)
+		if(vars["vice[i]"])
+			points++
+	return points
+
+// Points spent on selected loadout items (uses triumph_cost as point cost)
+/datum/preferences/proc/get_loadout_points_spent()
+	var/spent = 0
+	for(var/i = 1 to 10)
+		var/datum/loadout_item/L = vars[i == 1 ? "loadout" : "loadout[i]"]
+		if(L && L.triumph_cost)
+			spent += L.triumph_cost
+	return spent
+
+// Points spent on additional languages (1 point each for extra slots)
+/datum/preferences/proc/get_language_points_spent()
+	var/spent = 0
+	if(extra_language_1 && extra_language_1 != "None")
+		spent += 1
+	if(extra_language_2 && extra_language_2 != "None")
+		spent += 1
+	return spent
+
+// Total points available = base + points from vices
+/datum/preferences/proc/get_total_points()
+	return get_base_points() + get_vice_points()
+
+// Remaining points after accounting for loadouts and languages
+/datum/preferences/proc/get_remaining_points()
+	var/total = get_total_points()
+	var/spent = get_loadout_points_spent() + get_language_points_spent()
+	return total - spent
+
+
+/datum/preferences
 	var/unlock_content = 0
 
 	var/list/ignoring = list()
@@ -161,7 +204,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/highlight_color = "#FF0000"
 	var/datum/charflaw/charflaw
 	// Multiple vice selection (up to 5, at least 1 required)
-	var/datum/charflaw/vice1 = /datum/charflaw/addiction/godfearing
+	var/datum/charflaw/vice1
 	var/datum/charflaw/vice2
 	var/datum/charflaw/vice3
 	var/datum/charflaw/vice4

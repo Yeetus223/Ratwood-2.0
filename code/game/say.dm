@@ -151,7 +151,10 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	if(message_language && show_language_icon())
 		var/datum/language/D = GLOB.language_datum_instances[message_language]
 		if(istype(D) && D.display_icon(src))
-			languageicon = SPAN_TOOLTIP_DANGEROUS_HTML("<b>[D.name]</b>[D.desc ? "<br>" + D.desc : ""]", "<span style=\"position: relative; bottom: 4px;\">[D.get_icon()] </span>")
+			// Make only the language icon clickable; remove inline name text
+			var/ln = url_encode(D.name)
+			var/ldesc = url_encode(D.desc)
+			languageicon = "<a href='byond://?src=\\ref[usr.client];lang_name=[ln];lang_desc=[ldesc]'><span style=\"position: relative; bottom: 4px;\">[D.get_icon()] </span></a>"
 
 	return "[spanpart1][spanpart2][colorpart][freqpart][languageicon][compose_track_href(speaker, namepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][arrowpart][endspanpart][messagepart]"
 

@@ -1,63 +1,263 @@
+/datum/preferences/proc/check_virtue_vice_conflict(virtue_type, show_message = FALSE, mob/user = null)
+	// Check if selected virtue conflicts with any selected vice
+	var/list/vice_list = list()
+	for(var/i = 1 to 5)
+		var/datum/charflaw/v = vars["vice[i]"]
+		if(v)
+			vice_list += v
+	
+	// Bronze Arm (R) vs Wood Arm (R)
+	if(virtue_type == /datum/virtue/utility/bronzearm_r)
+		for(var/datum/charflaw/vice in vice_list)
+			if(vice && vice.type == /datum/charflaw/limbloss/arm_r)
+				if(show_message && user)
+					to_chat(user, span_warning("Bronze Arm (R) virtue conflicts with Wood Arm (R) vice!"))
+				return TRUE
+	
+	// Bronze Arm (L) vs Wood Arm (L)
+	if(virtue_type == /datum/virtue/utility/bronzearm_l)
+		for(var/datum/charflaw/vice in vice_list)
+			if(vice && vice.type == /datum/charflaw/limbloss/arm_l)
+				if(show_message && user)
+					to_chat(user, span_warning("Bronze Arm (L) virtue conflicts with Wood Arm (L) vice!"))
+				return TRUE
+	
+	// Night-eyed vs Colorblind
+	if(virtue_type == /datum/virtue/utility/night_vision)
+		for(var/datum/charflaw/vice in vice_list)
+			if(vice && vice.type == /datum/charflaw/colorblind)
+				if(show_message && user)
+					to_chat(user, span_warning("Night-eyed virtue conflicts with Colorblind vice!"))
+				return TRUE
+	
+	// Deathless (no hunger/breath) vs any food/breathing related vices
+	// Deathless conflicts with nothing currently, but kept for future reference
+	
+	return FALSE
+
+/datum/preferences/proc/check_virtue_virtue_conflict(virtue_type, other_virtue_type, show_message = FALSE, mob/user = null)
+	if(!virtue_type || !other_virtue_type)
+		return FALSE
+	if(virtue_type == /datum/virtue/utility/bronzearm_r && other_virtue_type == /datum/virtue/utility/bronzearm_l)
+		if(show_message && user)
+			to_chat(user, span_warning("Bronze Arm (R) virtue conflicts with Bronze Arm (L) virtue - you can't have both bronze arms!"))
+		return TRUE
+	if(virtue_type == /datum/virtue/utility/bronzearm_l && other_virtue_type == /datum/virtue/utility/bronzearm_r)
+		if(show_message && user)
+			to_chat(user, span_warning("Bronze Arm (L) virtue conflicts with Bronze Arm (R) virtue - you can't have both bronze arms!"))
+		return TRUE
+	return FALSE
+
+/datum/preferences/proc/check_vice_virtue_conflict(vice_type, show_message = FALSE, mob/user = null)
+	// Check if selected vice conflicts with any selected virtue
+	var/list/virtue_list = list(virtue, virtuetwo)
+	
+	// Wood Arm (R) vs Bronze Arm (R)
+	if(vice_type == /datum/charflaw/limbloss/arm_r)
+		for(var/datum/virtue/virt in virtue_list)
+			if(virt && virt.type == /datum/virtue/utility/bronzearm_r)
+				if(show_message && user)
+					to_chat(user, span_warning("Wood Arm (R) vice conflicts with Bronze Arm (R) virtue!"))
+				return TRUE
+	
+	// Wood Arm (L) vs Bronze Arm (L)
+	if(vice_type == /datum/charflaw/limbloss/arm_l)
+		for(var/datum/virtue/virt in virtue_list)
+			if(virt && virt.type == /datum/virtue/utility/bronzearm_l)
+				if(show_message && user)
+					to_chat(user, span_warning("Wood Arm (L) vice conflicts with Bronze Arm (L) virtue!"))
+				return TRUE
+	
+	// Colorblind vs Night-eyed
+	if(vice_type == /datum/charflaw/colorblind)
+		for(var/datum/virtue/virt in virtue_list)
+			if(virt && virt.type == /datum/virtue/utility/night_vision)
+				if(show_message && user)
+					to_chat(user, span_warning("Colorblind vice conflicts with Night-eyed virtue!"))
+				return TRUE
+	
+	// Mute vs Second Voice (can't have second voice if you're mute)
+	if(vice_type == /datum/charflaw/mute)
+		for(var/datum/virtue/virt in virtue_list)
+			if(virt && virt.type == /datum/virtue/utility/secondvoice)
+				if(show_message && user)
+					to_chat(user, span_warning("Mute vice conflicts with Second Voice virtue - you can't have a second voice if you're mute!"))
+				return TRUE
+	
+	// Unintelligible vs Second Voice (second voice won't help if you're unintelligible)
+	if(vice_type == /datum/charflaw/unintelligible)
+		for(var/datum/virtue/virt in virtue_list)
+			if(virt && virt.type == /datum/virtue/utility/secondvoice)
+				if(show_message && user)
+					to_chat(user, span_warning("Unintelligible vice conflicts with Second Voice virtue!"))
+				return TRUE
+	
+	return FALSE
+
+/datum/preferences/proc/check_vice_vice_conflict(vice_type, list/selected_vices, show_message = FALSE, mob/user = null)
+	// Check for vice conflicts
+	
+	// === EYE-RELATED CONFLICTS ===
+	// Bad Sight conflicts with: Cyclops (R), Cyclops (L), Blindness
+	if(vice_type == /datum/charflaw/badsight)
+		if(/datum/charflaw/noeyer in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Bad Sight vice conflicts with Cyclops (R) vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyel in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Bad Sight vice conflicts with Cyclops (L) vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyeall in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Bad Sight vice conflicts with Blindness vice!"))
+			return TRUE
+		if(/datum/charflaw/colorblind in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Bad Sight vice conflicts with Colorblind vice!"))
+			return TRUE
+	
+	// Cyclops (R) conflicts with: Bad Sight, Cyclops (L), Blindness, Colorblind
+	if(vice_type == /datum/charflaw/noeyer)
+		if(/datum/charflaw/badsight in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Cyclops (R) vice conflicts with Bad Sight vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyel in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Cyclops (R) vice conflicts with Cyclops (L) vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyeall in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Cyclops (R) vice conflicts with Blindness vice!"))
+			return TRUE
+		if(/datum/charflaw/colorblind in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Cyclops (R) vice conflicts with Colorblind vice!"))
+			return TRUE
+	
+	// Cyclops (L) conflicts with: Bad Sight, Cyclops (R), Blindness, Colorblind
+	if(vice_type == /datum/charflaw/noeyel)
+		if(/datum/charflaw/badsight in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Cyclops (L) vice conflicts with Bad Sight vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyer in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Cyclops (L) vice conflicts with Cyclops (R) vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyeall in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Cyclops (L) vice conflicts with Blindness vice!"))
+			return TRUE
+		if(/datum/charflaw/colorblind in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Cyclops (L) vice conflicts with Colorblind vice!"))
+			return TRUE
+	
+	// Blindness conflicts with: Bad Sight, Cyclops (R), Cyclops (L), Colorblind
+	if(vice_type == /datum/charflaw/noeyeall)
+		if(/datum/charflaw/badsight in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Blindness vice conflicts with Bad Sight vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyer in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Blindness vice conflicts with Cyclops (R) vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyel in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Blindness vice conflicts with Cyclops (L) vice!"))
+			return TRUE
+		if(/datum/charflaw/colorblind in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Blindness vice conflicts with Colorblind vice!"))
+			return TRUE
+	
+	// Colorblind conflicts with: Bad Sight, Cyclops (R), Cyclops (L), Blindness
+	if(vice_type == /datum/charflaw/colorblind)
+		if(/datum/charflaw/badsight in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Colorblind vice conflicts with Bad Sight vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyer in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Colorblind vice conflicts with Cyclops (R) vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyel in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Colorblind vice conflicts with Cyclops (L) vice!"))
+			return TRUE
+		if(/datum/charflaw/noeyeall in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Colorblind vice conflicts with Blindness vice!"))
+			return TRUE
+	
+	// === SLEEP-RELATED CONFLICTS ===
+	// Narcoleptic conflicts with: Insomnia (can't have both sleep disorders)
+	if(vice_type == /datum/charflaw/narcoleptic)
+		if(/datum/charflaw/sleepless in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Narcoleptic vice conflicts with Sleepless vice - you can't have both sleep disorders!"))
+			return TRUE
+	
+	// Insomnia conflicts with: Narcoleptic
+	if(vice_type == /datum/charflaw/sleepless)
+		if(/datum/charflaw/narcoleptic in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Sleepless vice conflicts with Narcoleptic vice - you can't have both sleep disorders!"))
+			return TRUE
+	
+	// === SPEECH-RELATED CONFLICTS ===
+	// Mute conflicts with: Unintelligible (can't have both speech impediments)
+	if(vice_type == /datum/charflaw/mute)
+		if(/datum/charflaw/unintelligible in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Mute vice conflicts with Unintelligible vice - you can't have both speech impediments!"))
+			return TRUE
+	
+	// Unintelligible conflicts with: Mute
+	if(vice_type == /datum/charflaw/unintelligible)
+		if(/datum/charflaw/mute in selected_vices)
+			if(show_message && user)
+				to_chat(user, span_warning("Unintelligible vice conflicts with Mute vice - you can't have both speech impediments!"))
+			return TRUE
+
+	return FALSE
+
 /datum/preferences/proc/open_vices_menu(mob/user)
 	if(!user || !user.client)
 		return
 	
-	user << browse(generate_vices_html(user), "window=character_custom;size=1200x800")
+	// Clean up duplicate vices/virtues (one-time fix for existing characters)
+	fix_duplicate_vices()
+	
+	var/html_content = generate_vices_html(user)
+	user << browse(html_content, "window=character_custom;size=750x500")
 
-/datum/preferences/proc/get_theme_colors()
-	var/list/colors = list()
-	
-	switch(tgui_theme)
-		if("azure_default")
-			colors["bg"] = "#000000"
-			colors["text"] = "#897472"
-			colors["label"] = "#897472"
-			colors["border"] = "#7b5353"
-			colors["panel"] = "#511111"
-			colors["panel_dark"] = "rgba(81, 17, 17, 0.6)"
-			colors["button_hover"] = "rgba(123, 83, 83, 0.3)"
-			colors["accent"] = "#ae3636"
-		if("azure_green")
-			colors["bg"] = "#141b15"
-			colors["text"] = "#d0d4cc"
-			colors["label"] = "#d0d4cc"
-			colors["border"] = "#619940"
-			colors["panel"] = "#343f35"
-			colors["panel_dark"] = "rgba(52, 63, 53, 0.6)"
-			colors["button_hover"] = "rgba(97, 153, 64, 0.3)"
-			colors["accent"] = "#619940"
-		if("azure_purple")
-			colors["bg"] = "#1a0f1f"
-			colors["text"] = "#d4c8e0"
-			colors["label"] = "#d4c8e0"
-			colors["border"] = "#8b5fa8"
-			colors["panel"] = "#3d2850"
-			colors["panel_dark"] = "rgba(61, 40, 80, 0.6)"
-			colors["button_hover"] = "rgba(139, 95, 168, 0.3)"
-			colors["accent"] = "#8b5fa8"
-		if("azure_lane")
-			colors["bg"] = "#0f1419"
-			colors["text"] = "#c8d4e0"
-			colors["label"] = "#c8d4e0"
-			colors["border"] = "#5f8ba8"
-			colors["panel"] = "#283d50"
-			colors["panel_dark"] = "rgba(40, 61, 80, 0.6)"
-			colors["button_hover"] = "rgba(95, 139, 168, 0.3)"
-			colors["accent"] = "#5f8ba8"
-		else // trey_liam or default
-			colors["bg"] = "#1C0000"
-			colors["text"] = "#e3c06f"
-			colors["label"] = "#999"
-			colors["border"] = "#444"
-			colors["panel"] = "rgba(0, 0, 0, 0.6)"
-			colors["panel_dark"] = "rgba(0, 0, 0, 0.4)"
-			colors["button_hover"] = "rgba(227, 192, 111, 0.2)"
-			colors["accent"] = "#e3c06f"
-	
-	return colors
+/datum/preferences/proc/fix_duplicate_vices()
+	// Remove duplicate vices across slots
+	var/list/seen_vices = list()
+	for(var/i = 1 to 5)
+		var/datum/charflaw/vice = vars["vice[i]"]
+		if(vice)
+			if(vice.type in seen_vices)
+				// Duplicate found, clear this slot
+				vars["vice[i]"] = null
+			else
+				seen_vices += vice.type
 
 /datum/preferences/proc/generate_vices_html(mob/user)
-	var/list/theme = get_theme_colors()
+	// Use same colors as main character creation menu
+	var/list/theme = list(
+		"bg" = "#100000",
+		"text" = "#aa8f8f",
+		"label" = "#aa8f8f",
+		"border" = "#7b5353",
+		"panel" = "#00000066",
+		"panel_dark" = "#00000044",
+		"button_hover" = "rgba(123, 83, 83, 0.3)"
+	)
 	
 	var/html = {"
 		<!DOCTYPE html>
@@ -67,25 +267,25 @@
 		<style>
 			body {
 				font-family: Verdana, Arial, sans-serif;
-				background: [theme["bg"]];
+				background: #100000 url('flowers.png') repeat;
 				color: [theme["text"]];
 				margin: 0;
 				padding: 0;
 			}
 			.header {
 				text-align: center;
-				padding: 15px;
+				padding: 5px;
 				background: [theme["panel_dark"]];
 				border-bottom: 2px solid [theme["border"]];
 			}
 			.header h1 {
 				margin: 0;
 				color: [theme["text"]];
-				font-size: 1.8em;
+				font-size: 1.0em;
 			}
 			.header p {
-				margin: 5px 0;
-				font-size: 0.9em;
+				margin: 2px 0;
+				font-size: 0.65em;
 				color: [theme["label"]];
 			}
 			.tabs {
@@ -97,7 +297,7 @@
 			}
 			.tab {
 				flex: 1;
-				padding: 15px 20px;
+				padding: 6px 10px;
 				text-align: center;
 				background: [theme["panel_dark"]];
 				border-right: 1px solid [theme["border"]];
@@ -105,6 +305,7 @@
 				cursor: pointer;
 				text-decoration: none;
 				display: block;
+				font-size: 0.7em;
 			}
 			.tab:hover {
 				background: [theme["button_hover"]];
@@ -113,10 +314,9 @@
 			.tab.active {
 				background: [theme["button_hover"]];
 				color: [theme["text"]];
-				border-bottom: 3px solid [theme["accent"]];
 			}
 			.tab-content {
-				padding: 20px;
+				padding: 8px;
 				display: none;
 			}
 			.tab-content.active {
@@ -124,50 +324,51 @@
 			}
 			.vices-grid {
 				display: grid;
-				grid-template-columns: repeat(1, 1fr);
-				gap: 15px;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 5px;
 			}
 			.vice-slot {
 				background: [theme["panel_dark"]];
 				border: 1px solid [theme["border"]];
-				padding: 15px;
+				padding: 6px;
 			}
 			.vice-slot.required {
-				border-color: [theme["accent"]];
+				border-color: [theme["border"]];
 			}
 			.vice-slot:hover {
-				border-color: [theme["accent"]];
+				border-color: [theme["border"]];
 			}
 			.slot-header {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				margin-bottom: 10px;
-				padding-bottom: 10px;
+				margin-bottom: 4px;
+				padding-bottom: 3px;
 				border-bottom: 1px solid [theme["border"]];
 			}
 			.slot-number {
 				font-weight: bold;
 				color: [theme["text"]];
+				font-size: 0.7em;
 			}
 			.slot-required {
-				background: [theme["accent"]];
+				background: [theme["border"]];
 				color: [theme["bg"]];
-				padding: 2px 8px;
-				font-size: 0.8em;
+				padding: 1px 5px;
+				font-size: 0.6em;
 				font-weight: bold;
 			}
 			.slot-cost {
 				background: #4CAF50;
 				color: #1C0000;
-				padding: 2px 8px;
-				font-size: 0.9em;
+				padding: 1px 5px;
+				font-size: 0.65em;
 				font-weight: bold;
 			}
 			.vice-display {
 				display: flex;
 				align-items: flex-start;
-				margin-bottom: 10px;
+				margin-bottom: 4px;
 			}
 			.vice-info {
 				flex: 1;
@@ -175,28 +376,29 @@
 			.vice-name {
 				font-weight: bold;
 				color: [theme["text"]];
-				margin-bottom: 5px;
+				margin-bottom: 2px;
+				font-size: 0.75em;
 			}
 			.vice-desc {
-				font-size: 0.85em;
+				font-size: 0.65em;
 				color: [theme["label"]];
-				line-height: 1.4;
+				line-height: 1.2;
 			}
 			.btn {
-				padding: 6px 12px;
+				padding: 3px 6px;
 				border: 1px solid [theme["border"]];
 				background: [theme["panel_dark"]];
 				color: [theme["text"]];
 				cursor: pointer;
 				font-family: Verdana, Arial, sans-serif;
-				font-size: 0.85em;
+				font-size: 0.6em;
 				text-decoration: none;
 				display: inline-block;
-				margin: 2px;
+				margin: 1px;
 			}
 			.btn:hover {
 				background: [theme["button_hover"]];
-				border-color: [theme["accent"]];
+				border-color: [theme["border"]];
 			}
 			.btn-select {
 				background: rgba(76, 175, 80, 0.3);
@@ -232,50 +434,52 @@
 			}
 			.empty-slot {
 				text-align: center;
-				padding: 20px;
+				padding: 8px;
 				color: [theme["label"]];
 				font-style: italic;
+				font-size: 0.7em;
 			}
 			.actions {
-				margin-top: 10px;
+				margin-top: 4px;
 				display: flex;
 				flex-wrap: wrap;
-				gap: 5px;
+				gap: 3px;
 			}
 			.statpack-section {
 				background: [theme["button_hover"]];
-				border: 2px solid [theme["accent"]];
-				padding: 20px;
-				margin-bottom: 20px;
+				border: 2px solid [theme["border"]];
+				padding: 10px;
+				margin-bottom: 10px;
 			}
 			.statpack-section h2 {
-				margin: 0 0 10px 0;
+				margin: 0 0 6px 0;
 				color: [theme["text"]];
-				font-size: 1.2em;
+				font-size: 1.05em;
 				border-bottom: 1px solid [theme["border"]];
-				padding-bottom: 10px;
+				padding-bottom: 6px;
 			}
 			.statpack-current {
 				background: [theme["panel_dark"]];
-				padding: 15px;
-				margin: 10px 0;
+				padding: 8px;
+				margin: 6px 0;
 				border: 1px solid [theme["border"]];
 			}
 			.statpack-name {
 				font-weight: bold;
 				color: [theme["text"]];
-				font-size: 1.1em;
-				margin-bottom: 8px;
+				font-size: 0.95em;
+				margin-bottom: 4px;
 			}
 			.statpack-desc {
 				color: [theme["label"]];
-				line-height: 1.4;
-				margin-bottom: 10px;
+				line-height: 1.3;
+				margin-bottom: 5px;
+				font-size: 0.8em;
 			}
 			.statpack-stats {
 				color: #4CAF50;
 				font-style: italic;
-				font-size: 0.9em;
+				font-size: 0.75em;
 			}
 		</style>
 		<script>
@@ -333,7 +537,7 @@
 		</script>
 		<body>
 			<div class="header">
-				<h1>⚔ Character Customization ⚔</h1>
+				<h1>Character Customization</h1>
 				<p>Configure all your character features</p>
 			</div>
 			
@@ -345,30 +549,42 @@
 			
 			<div id="traits" class="tab-content active">
 			
-			<div class="statpack-section">
-				<h2>📊 Statpack Selection</h2>
-				<div class="statpack-current">
-					<div class="statpack-name">[statpack.name]</div>
-					<div class="statpack-desc">[statpack.description_string()]</div>
-				</div>
-				<div class="actions">
-					<a class='btn btn-select' href='byond://?src=\ref[src];statpack_action=change'>Change Statpack</a>
-				</div>
-			</div>
-			
 		<div class="statpack-section">
-			<h2>✨ Virtue Selection</h2>
+			<h2>Statpack Selection</h2>
+			<div class="statpack-current">"}
+	
+	// Build statpack name with stats inline
+	var/stats_string = statpack.generate_modifier_string()
+	if(stats_string)
+		html += "<div class='statpack-name'>[statpack.name] <span class='statpack-stats'>" + stats_string + "</span></div>"
+	else
+		html += "<div class='statpack-name'>[statpack.name]</div>"
+	
+	html += {"<div class="statpack-desc">[statpack.desc]</div>
+			</div>
+			<div class="actions">
+				<a class='btn btn-select' href='byond://?src=\ref[src];statpack_action=change'>Change Statpack</a>
+		</div>
+	</div>		<div class="statpack-section">
+			<h2>Virtue Selection</h2>
 			<div class="statpack-current">
 				<div class="statpack-name">Primary Virtue: [virtue.name]</div>
-				<div class="statpack-desc">[virtue.desc]</div>
-			</div>"}
+				<div class="statpack-desc">[virtue.desc]</div>"}
+	
+	if(virtue.custom_text)
+		html += "<div class='statpack-stats' style='margin-top: 4px;'>" + virtue.custom_text + "</div>"
+	
+	html += "</div>"
 	
 	if(statpack.name == "Virtuous")
 		html += {"
-			<div class="statpack-current" style='margin-top: 10px;'>
-				<div class="statpack-name">Second Virtue: [virtuetwo.name]</div>
-				<div class="statpack-desc">[virtuetwo.desc]</div>
-			</div>"}
+		<div class=\"statpack-current\" style='margin-top: 10px;'>
+			<div class=\"statpack-name\">Second Virtue: [virtuetwo.name]</div>
+			<div class=\"statpack-desc\">[virtuetwo.desc]</div>
+		</div>"}
+		
+		if(virtuetwo.custom_text)
+			html += "<div class='statpack-stats' style='margin-top: 4px;'>" + virtuetwo.custom_text + "</div>"
 	
 	html += {"
 			<div class="actions">
@@ -381,8 +597,8 @@
 			</div>
 		</div>
 		
-		<h2 style='color: [theme["text"]]; padding: 0 20px; margin: 20px 0 10px 0; border-bottom: 1px solid [theme["border"]]; padding-bottom: 10px;'>⚔ Vice Selection</h2>
-		<p style='color: [theme["label"]]; padding: 0 20px; margin: 0 0 15px 0; font-size: 0.9em;'>Select up to 5 vices (at least 1 required). Some vices grant Triumphs but all impose character limitations.</p>			<div class="vices-grid">
+		<h2 style='color: [theme["text"]]; padding: 0 20px; margin: 20px 0 10px 0; border-bottom: 1px solid [theme["border"]]; padding-bottom: 10px;'>Vice Selection</h2>
+		<p style='color: [theme["label"]]; padding: 0 20px; margin: 0 0 15px 0; font-size: 0.9em;'>Select up to 5 vices (at least 1 required). Each selected vice grants +1 point. Points are shared between languages and loadout.</p>			<div class="vices-grid">
 	"}
 	
 	// Generate 5 vice slots
@@ -399,13 +615,8 @@
 			html += "<span class='slot-required'>REQUIRED</span>"
 		
 		if(current_vice)
-			// Extract triumph value from name
-			var/triumph_match = findtext(current_vice.name, "(+")
-			if(triumph_match)
-				var/triumph_end = findtext(current_vice.name, " TRI)", triumph_match)
-				if(triumph_end)
-					var/triumph_str = copytext(current_vice.name, triumph_match + 2, triumph_end)
-					html += "<span class='slot-cost'>+[triumph_str] Triumphs</span>"
+			// In point-buy, every vice contributes +1 point
+			html += "<span class='slot-cost'>+1 Point</span>"
 		
 		html += "</div>"
 		
@@ -440,28 +651,30 @@
 			</div>
 			
 		<div id="loadout" class="tab-content">
-			<h2 style='color: [theme["text"]]; margin: 0 0 20px 0;'>⚔ Loadout Selection ⚔</h2>
+			<h2 style='color: [theme["text"]]; margin: 0 0 10px 0; font-size: 1.1em;'>Loadout Selection</h2>
 	"}
 	
-	// Calculate triumph costs for loadout
-	var/total_triumphs = user.get_triumphs() || 0
+	// Calculate point costs for loadout
+	var/total_points = get_total_points()
 	var/loadout_spent = 0
 	for(var/i = 1 to 10)
-		var/datum/loadout_item/loadout_slot = vars["loadout[i == 1 ? "" : "[i]"]"]
+		var/datum/loadout_item/loadout_slot = vars[i == 1 ? "loadout" : "loadout[i]"]
 		if(loadout_slot && loadout_slot.triumph_cost)
 			loadout_spent += loadout_slot.triumph_cost
-	
-	var/loadout_remaining = total_triumphs - loadout_spent
+
+	// Also subtract language spending to reflect shared pool
+	var/lang_spent_for_pool = get_language_points_spent()
+	var/loadout_remaining = total_points - (loadout_spent + lang_spent_for_pool)
 	
 	html += {"
 			<div class='statpack-section'>
-				<div style='font-size: 1em; margin-bottom: 10px;'>
-					<span style='color: #4CAF50;'>Available Triumphs: [loadout_remaining]</span> | 
-					<span style='color: [theme["accent"]];'>Spent: [loadout_spent]</span> / 
-					<span>Total: [total_triumphs]</span>
+				<div style='font-size: 0.85em; margin-bottom: 5px;'>
+					<span style='color: #4CAF50;'>Available Points: [loadout_remaining]</span> | 
+					<span style='color: [theme["text"]];'>Spent (Loadout): [loadout_spent]</span> / 
+					<span>Total Points: [total_points]</span>
 				</div>
 			</div>
-			<div style='display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;'>
+			<div style='display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;'>
 	"}
 	
 	// Generate loadout slots with original styling
@@ -477,7 +690,7 @@
 		html += "<span class='slot-number'>Slot [i]</span>"
 		
 		if(current_item && current_item.triumph_cost)
-			html += "<span class='slot-cost'>[current_item.triumph_cost] Triumphs</span>"
+			html += "<span class='slot-cost'>[current_item.triumph_cost] Points</span>"
 		
 		html += "</div>"
 		
@@ -488,13 +701,13 @@
 			var/icon_state = initial(sample.icon_state)
 			var/item_desc = initial(sample.desc)
 			
-			html += "<div style='display: flex; align-items: center; margin-bottom: 10px;'>"
-			html += "<div style='width: 64px; height: 64px; background: rgba(0,0,0,0.6); border: 1px solid #444; margin-right: 15px; display: flex; align-items: center; justify-content: center;'>"
+			html += "<div style='display: flex; align-items: center; margin-bottom: 6px;'>"
+			html += "<div style='width: 48px; height: 48px; background: rgba(0,0,0,0.6); border: 1px solid #444; margin-right: 8px; display: flex; align-items: center; justify-content: center;'>"
 			
 			// Use the item's icon
 			if(icon_file && icon_state)
 				user << browse_rsc(icon(icon_file, icon_state), "loadout_icon_[i].png")
-				html += "<img src='loadout_icon_[i].png' style='max-width: 60px; max-height: 60px;' />"
+				html += "<img src='loadout_icon_[i].png' style='max-width: 46px; max-height: 46px;' />"
 			
 			html += "</div>"
 			html += "<div style='flex: 1;'>"
@@ -502,16 +715,17 @@
 			html += "<div class='vice-desc'>[custom_desc ? custom_desc : (item_desc ? item_desc : current_item.desc)]</div>"
 			
 			if(custom_name || custom_desc)
-				html += "<div style='margin-top: 5px; font-size: 0.8em; color: [theme["label"]];'>✎ Customized</div>"
+				html += "<div style='margin-top: 3px; font-size: 0.7em; color: [theme["label"]];'>✎ Customized</div>"
 			
 			if(item_color)
-				html += "<div style='margin-top: 5px; font-size: 0.8em; color: [item_color];'>● Color: [item_color]</div>"
+				var/color_hex = clothing_color2hex(item_color)
+				html += "<div style='margin-top: 3px; font-size: 0.7em; display: flex; align-items: center;'><span style='color: [color_hex];'>●</span> <span style='color: [theme["label"]]; margin-left: 3px;'>Color: [item_color]</span></div>"
 			
 			html += "</div>"
 			html += "</div>"
 			
 			html += "<div class='actions'>"
-			html += "<a class='btn btn-select' href='byond://?src=\ref[src];loadout_action=change;slot=[i]'>Change Item</a>"
+			html += "<a class='btn btn-select' href='byond://?src=\ref[src];loadout_action=item;slot=[i]'>Change Item</a>"
 			html += "<a class='btn btn-customize' href='byond://?src=\ref[src];loadout_action=rename;slot=[i]'>Rename</a>"
 			html += "<a class='btn btn-customize' href='byond://?src=\ref[src];loadout_action=describe;slot=[i]'>Description</a>"
 			html += "<a class='btn btn-color' href='byond://?src=\ref[src];loadout_action=color;slot=[i]'>Color</a>"
@@ -520,7 +734,7 @@
 		else
 			html += "<div class='empty-slot'>"
 			html += "Empty Slot<br><br>"
-			html += "<a class='btn btn-select' href='byond://?src=\ref[src];loadout_action=select;slot=[i]'>Select Item</a>"
+			html += "<a class='btn btn-select' href='byond://?src=\ref[src];loadout_action=item;slot=[i]'>Select Item</a>"
 			html += "</div>"
 		
 		html += "</div>"
@@ -533,24 +747,25 @@
 			<h2 style='color: [theme["text"]]; margin: 0 0 20px 0;'>📜 Additional Language Selection 📜</h2>
 	"}
 	
-	// Calculate language costs
+	// Calculate language costs (1 point each)
 	var/lang_spent = 0
 	var/purchased_count = 0
 	if(extra_language_1 && extra_language_1 != "None")
 		purchased_count++
 	if(extra_language_2 && extra_language_2 != "None")
 		purchased_count++
-	
-	lang_spent = purchased_count * 2
-	var/lang_remaining = total_triumphs - lang_spent
+
+	lang_spent = purchased_count * 1
+	// Subtract loadout spend to reflect shared pool
+	var/lang_remaining = total_points - (lang_spent + loadout_spent)
 	
 	html += {"
 			<div class='statpack-section' style='background: rgba(76, 175, 80, 0.1); border: 1px solid #4CAF50; padding: 15px; margin-bottom: 20px;'>
-				<p style='margin: 0 0 10px 0;'>ℹ You get <b>one free language</b> based on your character background, plus up to 2 additional triumph languages (2 triumphs each). Your race already grants you certain languages by default.</p>
+				<p style='margin: 0 0 10px 0;'>ℹ You get <b>one free language</b> from background, plus up to 2 additional languages (1 point each). Your race may grant languages by default.</p>
 				<div style='font-size: 1em;'>
-					<span style='color: #4CAF50;'>Available Triumphs: [lang_remaining]</span> | 
-					<span style='color: [theme["accent"]];'>Spent: [lang_spent]</span> / 
-					<span>Total: [total_triumphs]</span>
+					<span style='color: #4CAF50;'>Available Points: [lang_remaining]</span> | 
+					<span style='color: [theme["text"]];'>Spent (Languages): [lang_spent]</span> / 
+					<span>Total Points: [total_points]</span>
 				</div>
 			</div>
 			<div style='display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;'>
@@ -586,7 +801,7 @@
 	
 	html += "</div>"
 	
-	// Generate 2 TRIUMPH language slots
+	// Generate 2 paid language slots (1 point each)
 	for(var/i = 1 to 2)
 		var/slot_var = i == 1 ? "extra_language_1" : "extra_language_2"
 		var/current_lang_path = vars[slot_var]
@@ -594,10 +809,8 @@
 		html += "<div class='vice-slot'>"
 		html += "<div class='slot-header'>"
 		html += "<span class='slot-number'>Language Slot [i]</span>"
-		
 		if(current_lang_path && current_lang_path != "None")
-			html += "<span class='slot-cost'>2 Triumphs</span>"
-		
+			html += "<span class='slot-cost'>1 Point</span>"
 		html += "</div>"
 		
 		if(current_lang_path && current_lang_path != "None")
@@ -621,6 +834,7 @@
 			html += "<div class='empty-slot'>"
 			html += "No Language Selected<br><br>"
 			html += "<a class='btn btn-select' href='byond://?src=\ref[src];language_action=select;slot=[i]'>Select Language</a>"
+			html += "</div>"
 		html += "</div>"
 	
 	html += "</div>"
@@ -639,61 +853,63 @@
 	if(href_list["virtue_action"])
 		var/action = href_list["virtue_action"]
 		
-		switch(action)
-			if("change_primary")
-				// Build virtue list
-				var/list/virtues_available = list()
-				for(var/path as anything in GLOB.virtues)
-					var/datum/virtue/V = GLOB.virtues[path]
-					if(!V.name)
-						continue
-					// Check if restricted by species
-					if(length(pref_species.restricted_virtues))
-						if(V.type in pref_species.restricted_virtues)
-							continue
-					virtues_available[V.name] = V
-				
-				virtues_available = sort_list(virtues_available)
-				var/choice = tgui_input_list(usr, "Choose your primary virtue:", "Virtue Selection", virtues_available)
-				
-				if(choice)
-					var/datum/virtue/selected = virtues_available[choice]
-					virtue = selected
-					to_chat(usr, span_notice("Selected [choice] as primary virtue."))
-					to_chat(usr, "<span class='info'>[selected.desc]</span>")
-					save_preferences()
-					open_vices_menu(usr)
+		if(action == "change_primary")
+			// Build virtue list
+			var/list/virtues_available = list()
+			for(var/path as anything in GLOB.virtues)
+				var/datum/virtue/V = GLOB.virtues[path]
+				// Basic filtering can be added here if needed
+				virtues_available[V.name] = V
+			
+			virtues_available = sort_list(virtues_available)
+			var/choice = tgui_input_list(usr, "Choose your primary virtue:", "Virtue Selection", virtues_available)
+			
+			if(choice)
+				var/datum/virtue/selected = virtues_available[choice]
+				virtue = selected
+				to_chat(usr, span_notice("Selected [choice] as primary virtue."))
+				to_chat(usr, "<span class='info'>[selected.desc]</span>")
+				save_character()
+				open_vices_menu(usr)
+			return
+		
+		if(action == "change_secondary")
+			if(statpack.name != "Virtuous")
+				to_chat(usr, span_warning("Second virtue is only available with the Virtuous statpack!"))
 				return
 			
-			if("change_secondary")
-				if(statpack.name != "Virtuous")
-					to_chat(usr, span_warning("Second virtue is only available with the Virtuous statpack!"))
-					return
-				
-				// Build virtue list
-				var/list/virtues_available = list()
-				for(var/path as anything in GLOB.virtues)
-					var/datum/virtue/V = GLOB.virtues[path]
-					if(!V.name)
+			// Build virtue list
+			var/list/virtues_available = list()
+			for(var/path as anything in GLOB.virtues)
+				var/datum/virtue/V = GLOB.virtues[path]
+				if(!V.name)
+					continue
+				// Check if restricted by species
+				if(length(pref_species.restricted_virtues))
+					if(V.type in pref_species.restricted_virtues)
 						continue
-					// Check if restricted by species
-					if(length(pref_species.restricted_virtues))
-						if(V.type in pref_species.restricted_virtues)
-							continue
-					virtues_available[V.name] = V
-				
-				virtues_available = sort_list(virtues_available)
-				var/choice = tgui_input_list(usr, "Choose your second virtue:", "Second Virtue Selection", virtues_available)
-				
-				if(choice)
-					var/datum/virtue/selected = virtues_available[choice]
-					virtuetwo = selected
-					to_chat(usr, span_notice("Selected [choice] as second virtue."))
-					to_chat(usr, "<span class='info'>[selected.desc]</span>")
-					save_preferences()
-					open_vices_menu(usr)
-				return
-		return
+				// Skip if already selected as primary virtue
+				if(virtue && V.type == virtue.type)
+					continue
+				// Check for conflicting vices
+				if(check_virtue_vice_conflict(V.type, TRUE, usr))
+					continue
+				// Check for conflicting virtues (with primary virtue)
+				if(virtue && check_virtue_virtue_conflict(V.type, virtue.type, TRUE, usr))
+					continue
+				virtues_available[V.name] = V
+			
+			virtues_available = sort_list(virtues_available)
+			var/choice = tgui_input_list(usr, "Choose your second virtue:", "Second Virtue Selection", virtues_available)
+			
+			if(choice)
+				var/datum/virtue/selected = virtues_available[choice]
+				virtuetwo = selected
+				to_chat(usr, span_notice("Selected [choice] as second virtue."))
+				to_chat(usr, "<span class='info'>[selected.desc]</span>")
+				save_character()
+				open_vices_menu(usr)
+			return
 	
 	if(href_list["statpack_action"])
 		if(href_list["statpack_action"] == "change")
@@ -703,7 +919,12 @@
 				var/datum/statpack/SP = GLOB.statpacks[path]
 				if (!SP.name)
 					continue
-				statpacks_available[SP.name] = SP
+				// Add stats to the name in the selection list
+				var/display_name = SP.name
+				var/stats = SP.generate_modifier_string()
+				if(stats)
+					display_name = "[SP.name] [stats]"
+				statpacks_available[display_name] = SP
 			
 			statpacks_available = sort_list(statpacks_available)
 			var/choice = tgui_input_list(usr, "Choose your statpack:", "Statpack Selection", statpacks_available)
@@ -720,9 +941,9 @@
 				else
 					virtuetwo = GLOB.virtues[/datum/virtue/none]
 				
-				save_preferences()
+				save_character()
 				open_vices_menu(usr)
-		return
+			return
 	
 	if(href_list["vice_action"])
 		var/action = href_list["vice_action"]
@@ -753,6 +974,14 @@
 					if(vice_type in selected_vices && current_vice?.type != vice_type)
 						continue
 					
+					// Check for conflicting virtues
+					if(check_vice_virtue_conflict(vice_type, TRUE, usr))
+						continue
+					
+					// Check for conflicting vices (eye-related)
+					if(check_vice_vice_conflict(vice_type, selected_vices, TRUE, usr))
+						continue
+					
 					vices_available[vice_name] = vice_type
 				
 				vices_available = sort_list(vices_available)
@@ -765,7 +994,7 @@
 					var/datum/charflaw/new_vice = vars[slot_var]
 					if(new_vice.desc)
 						to_chat(usr, "<span class='info'>[new_vice.desc]</span>")
-					save_preferences()
+					save_character()
 					open_vices_menu(usr)
 			
 			if("clear")
@@ -774,7 +1003,7 @@
 					return
 				
 				vars[slot_var] = null	
-				save_preferences()
+				save_character()
 				open_vices_menu(usr)
 	
 	if(href_list["loadout_action"])
@@ -784,12 +1013,19 @@
 		if(!slot || slot < 1 || slot > 10)
 			return
 		
-		var/slot_var = slot == 1 ? "loadout" : "loadout[slot]"
-		
+		var/slot_var = (slot == 1) ? "loadout" : "loadout[slot]"
+
 		switch(action)
-			if("select", "change")
-				// Show item selection menu
-				var/list/loadouts_available = list("None")
+			if("item")
+				// Initialize lists for available loadouts and selected loadouts at the start of the block
+				var/list/loadouts_available = list()
+				var/list/selected_loadouts = list()
+				var/list/selected_items = list()
+				for(var/i = 1 to 10)
+					var/datum/loadout_item/existing_item = vars[i == 1 ? "loadout" : "loadout[i]"]
+					if(existing_item)
+						selected_items += existing_item
+						selected_loadouts += existing_item.type
 				
 				for(var/path as anything in GLOB.loadout_items)
 					var/datum/loadout_item/item = GLOB.loadout_items[path]
@@ -799,10 +1035,15 @@
 						if(!item.donator_ckey_check(usr.ckey))
 							continue
 					
-					// Show triumph cost in name
+					// Skip if already selected in another slot
+					var/datum/loadout_item/current_item = vars[slot_var]
+					if(item.type in selected_loadouts && current_item?.type != item.type)
+						continue
+					
+					// Show point cost in name
 					var/display_name = item.name
 					if(item.triumph_cost)
-						display_name = "[item.name] (-[item.triumph_cost] TRI)"
+						display_name = "[item.name] (-[item.triumph_cost] PT)"
 					
 					loadouts_available[display_name] = item
 				
@@ -811,21 +1052,24 @@
 				if(choice && choice != "None")
 					var/datum/loadout_item/selected = loadouts_available[choice]
 					
-					// Check triumph cost
+					// Check point cost against shared pool
 					if(selected.triumph_cost)
-						var/total_triumphs = usr.get_triumphs()
-						var/spent_triumphs = 0
+						var/total_points = get_total_points()
+						var/spent_points = 0
 						
-						// Calculate current spent (excluding this slot if changing)
+						// Calculate current loadout spent (excluding this slot if changing)
 						for(var/i = 1 to 10)
 							if(i == slot)
 								continue
 							var/datum/loadout_item/other_slot = vars[i == 1 ? "loadout" : "loadout[i]"]
 							if(other_slot && other_slot.triumph_cost)
-								spent_triumphs += other_slot.triumph_cost
+								spent_points += other_slot.triumph_cost
 						
-						if(spent_triumphs + selected.triumph_cost > total_triumphs)
-							to_chat(usr, span_warning("You don't have enough triumphs! Need [selected.triumph_cost], but only have [total_triumphs - spent_triumphs] remaining."))
+						// Include language spend
+						spent_points += get_language_points_spent()
+						
+						if(spent_points + selected.triumph_cost > total_points)
+							to_chat(usr, span_warning("Not enough points! Need [selected.triumph_cost], but only have [total_points - spent_points] remaining."))
 							return
 					
 					vars[slot_var] = selected
@@ -833,7 +1077,7 @@
 				else
 					vars[slot_var] = null
 				
-				save_preferences()
+				save_character()
 				open_vices_menu(usr)
 			
 			if("clear")
@@ -841,7 +1085,7 @@
 				vars["loadout_[slot]_name"] = null
 				vars["loadout_[slot]_desc"] = null
 				vars["loadout_[slot]_hex"] = null
-				save_preferences()
+				save_character()
 				open_vices_menu(usr)
 			
 			if("rename")
@@ -853,7 +1097,7 @@
 				
 				if(new_name != null) // Allow empty string to clear
 					vars["loadout_[slot]_name"] = new_name
-					save_preferences()
+					save_character()
 					open_vices_menu(usr)
 			
 			if("describe")
@@ -865,7 +1109,7 @@
 				
 				if(new_desc != null) // Allow empty string to clear
 					vars["loadout_[slot]_desc"] = new_desc
-					save_preferences()
+					save_character()
 					open_vices_menu(usr)
 			
 			if("color")
@@ -873,11 +1117,15 @@
 				if(!current)
 					return
 				
-				var/new_color = input(usr, "Choose a color for this item:", "Item Color", vars["loadout_[slot]_hex"]) as color|null
+				var/list/color_choices = list("None") + CLOTHING_COLOR_NAMES
+				var/new_color = tgui_input_list(usr, "Choose a color for this item:", "Item Color", color_choices, vars["loadout_[slot]_hex"])
 				
 				if(new_color)
-					vars["loadout_[slot]_hex"] = new_color
-					save_preferences()
+					if(new_color == "None")
+						vars["loadout_[slot]_hex"] = null
+					else
+						vars["loadout_[slot]_hex"] = new_color
+					save_character()
 					open_vices_menu(usr)
 	
 	if(href_list["language_action"])
@@ -916,7 +1164,7 @@
 					extra_language = "None"
 				else
 					extra_language = choices[chosen_language]
-				save_preferences()
+				save_character()
 			open_vices_menu(usr)
 			return
 		
@@ -959,11 +1207,15 @@
 					if(vars[other_slot_var] == language)
 						continue
 					
+					// Check if already selected as free language
+					if(extra_language == language)
+						continue
+					
 					var/datum/language/a_language = new language()
 					choices[a_language.name] = language
 					qdel(a_language)
 				
-				var/chosen_language = input(usr, "Choose a language (2 triumphs each):", "Language Selection") as null|anything in choices
+				var/chosen_language = input(usr, "Choose a language (1 point each):", "Language Selection") as null|anything in choices
 				
 				if(chosen_language)
 					if(chosen_language == "None")
@@ -971,29 +1223,30 @@
 					else
 						var/language_path = choices[chosen_language]
 						
-						// Check triumph cost
-						var/total_triumphs = 0
-						if(usr && usr.client)
-							total_triumphs = usr.get_triumphs() || 0
-						var/spent_triumphs = 0
+						// Check point cost against shared pool (1 point per language)
+						var/total_points = get_total_points()
+						var/spent_points = 0
 						
 						// Count current language purchases (excluding this slot)
 						var/other_slot_var = slot == 1 ? "extra_language_2" : "extra_language_1"
 						if(vars[other_slot_var] && vars[other_slot_var] != "None")
-							spent_triumphs += 2
-							
-						if(spent_triumphs + 2 > total_triumphs)
-							to_chat(usr, span_warning("You don't have enough triumphs! Need 2, but only have [total_triumphs - spent_triumphs] remaining."))
+							spent_points += 1
+						
+						// Include loadout spend
+						spent_points += get_loadout_points_spent()
+						
+						if(spent_points + 1 > total_points)
+							to_chat(usr, span_warning("Not enough points! Need 1, but only have [total_points - spent_points] remaining."))
 							return
 							
 						vars[slot_var] = language_path
 						to_chat(usr, span_notice("Selected [chosen_language] for language slot [slot]."))
 					
-					save_preferences()
+					save_character()
 				
 				open_vices_menu(usr)
 			
 			if("clear")
 				vars[slot_var] = "None"
-				save_preferences()
+				save_character()
 				open_vices_menu(usr)

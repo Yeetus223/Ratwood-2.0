@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 		if(ckeywhitelist)
 			donoritem = TRUE
 	if (triumph_cost)
-		desc += "<b>Costs [triumph_cost] TRIUMPH.</b>"
+		desc += "<b>Costs [triumph_cost] Points.</b>"
 
 /datum/loadout_item/proc/donator_ckey_check(key)
 	if(ckeywhitelist && ckeywhitelist.Find(key))
@@ -1031,17 +1031,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/tri_cudgel
 	name = "Cudgel"
 	path = /obj/item/rogueweapon/mace/cudgel
-	triumph_cost = 4
-
-// AXES
-/datum/loadout_item/tri_hatchet_copper
-	name = "Copper Hatchet"
-	path = /obj/item/rogueweapon/stoneaxe/handaxe/copper
-	triumph_cost = 4
-
-/datum/loadout_item/tri_messer_rhomphaia_copper
-	name = "Copper Rhomphaia"
-	path = /obj/item/rogueweapon/sword/long/rhomphaia/copper
 	triumph_cost = 4
 
 /datum/loadout_item/tri_huntingknife_iron

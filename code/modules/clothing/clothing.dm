@@ -574,4 +574,71 @@ BLIND     // can't see anything
 
 	//This makes it appear darker than the rest of examine text. Draws the cursor to it like to a link.
 	examine_text = "<font color = '#808080'>[examine_text]</font>"
-	return SPAN_TOOLTIP_DANGEROUS_HTML(str, examine_text)
+	// Make the armor info clickable; clicking prints full details to chat
+	return "<a href='byond://?src=\\ref[src];show_examine=1'>[str]</a>"
+
+// Simplified ratings string for inline examine
+/obj/item/clothing/proc/get_simplified_armor_string()
+	if(!armor)
+		return ""
+	if(armor.getRating("slash") == 0 && armor.getRating("stab") == 0 && armor.getRating("blunt") == 0 && armor.getRating("piercing") == 0)
+		return ""
+	return "BLUNT [armor.blunt] | SLASH [armor.slash] | STAB [armor.stab] | PIERCE [armor.piercing]"
+
+// Inline overview for examine: name, desc, simplified ratings
+/obj/item/clothing/proc/get_examine_overview(mob/user)
+	var/list/parts = list()
+	if(name)
+		// Make item name clickable; clicking prints full details to chat
+		parts += "<a href='byond://?src=\\ref[src];show_examine=1'>[name]</a>"
+	var/examine_text = get_examine_string(user)
+	if(examine_text && length(examine_text))
+		parts += "[examine_text]"
+	var/simplified = get_simplified_armor_string()
+	if(simplified && length(simplified))
+		parts += simplified
+	return jointext(parts, " — ")
+
+// Build the detailed examine string for chat output
+/obj/item/clothing/proc/build_examine_detail(mob/user, showcrits)
+	if(!armor) // No armor
+		return get_examine_string(user)
+
+	var/str = ""
+	str += "[colorgrade_rating("🔨 BLUNT ", armor.blunt, elaborate = TRUE)] | "
+	str += "[colorgrade_rating("🪓 SLASH ", armor.slash, elaborate = TRUE)]"
+	str += "<br>"
+	str += "[colorgrade_rating("🗡️ STAB ", armor.stab, elaborate = TRUE)] | "
+	str += "[colorgrade_rating("🏹 PIERCE ", armor.piercing, elaborate = TRUE)] "
+
+	if(showcrits && prevent_crits)
+		str += "<br>———————————————<br>"
+		str += "<font color = '#afaeae'><text-align: center>STOPS CRITS: <br>"
+		var/linebreak_count = 0
+		var/index = 0
+		for(var/flag in prevent_crits)
+			index++
+			if(flag == BCLASS_PICK)
+				flag = "pick"
+			str += ("[capitalize(flag)] ")
+			linebreak_count++
+			if(linebreak_count >= 3)
+				str += "<br>"
+				linebreak_count = 0
+			else if(index != length(prevent_crits))
+				str += " | "
+		str += "</font>"
+
+	var/examine_text = get_examine_string(user)
+	if(examine_text && length(examine_text))
+		str += "<br><font color = '#808080'>[examine_text]</font>"
+	return str
+
+// Handle clicks from chat to show the examine details
+/obj/item/clothing/Topic(href, href_list)
+	if(href_list["show_examine"]) 
+		var/mob/user = usr
+		if(user)
+			to_chat(user, build_examine_detail(user, TRUE))
+		return
+	..()

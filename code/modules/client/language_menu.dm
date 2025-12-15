@@ -6,20 +6,20 @@
 	open_vices_menu(user)
 
 /datum/preferences/proc/generate_language_html(mob/user)
-	var/total_triumphs = 0
-	if(user && user.client)
-		total_triumphs = user.get_triumphs() || 0
-	var/spent_triumphs = 0
-	
-	// Calculate spent triumphs from languages (2 each)
+	// Use shared point pool
+	var/total_points = get_total_points()
+	var/spent_points = 0
+    
+	// Calculate spent points from languages (1 each)
 	var/purchased_count = 0
 	if(extra_language_1 && extra_language_1 != "None")
 		purchased_count++
 	if(extra_language_2 && extra_language_2 != "None")
 		purchased_count++
-	
-	spent_triumphs = purchased_count * 2
-	var/remaining_triumphs = total_triumphs - spent_triumphs
+    
+	spent_points = purchased_count * 1
+	// Also subtract loadout spent to reflect shared pool
+	var/remaining_points = total_points - (spent_points + get_loadout_points_spent())
 	
 	var/html = {"
 		<!DOCTYPE html>
@@ -46,14 +46,14 @@
 				color: #e3c06f;
 				font-size: 1.5em;
 			}
-			.triumph-counter {
+			.points-counter {
 				font-size: 1em;
 				margin-top: 10px;
 			}
-			.triumph-available {
+			.points-available {
 				color: #4CAF50;
 			}
-			.triumph-spent {
+			.points-spent {
 				color: #ff9800;
 			}
 			.info-box {
@@ -158,15 +158,15 @@
 		<body>
 			<div class="header">
 				<h1>📜 Additional Language Selection 📜</h1>
-				<div class="triumph-counter">
-					<span class="triumph-available">Available Triumphs: [remaining_triumphs]</span> | 
-					<span class="triumph-spent">Spent: [spent_triumphs]</span> / 
-					<span>Total: [total_triumphs]</span>
+				<div class="points-counter">
+					<span class="points-available">Available Points: [remaining_points]</span> | 
+					<span class="points-spent">Spent (Languages): [spent_points]</span> / 
+					<span>Total Points: [total_points]</span>
 				</div>
 			</div>
 			
 			<div class="info-box">
-				ℹ You get <b>one free language</b> based on your character background, plus up to 2 additional triumph languages (2 triumphs each). Your race already grants you certain languages by default.
+				ℹ You get <b>one free language</b> based on your character background, plus up to 2 additional languages (1 point each). Your race already grants you certain languages by default.
 			</div>
 			
 			<div class="language-grid">
@@ -200,7 +200,7 @@
 	
 	html += "</div>"
 	
-	// Generate 2 TRIUMPH language slots
+	// Generate 2 paid language slots (1 point each)
 	for(var/i = 1 to 2)
 		var/slot_var = i == 1 ? "extra_language_1" : "extra_language_2"
 		var/current_lang_path = vars[slot_var]
@@ -210,7 +210,7 @@
 		html += "<span class='slot-number'>Language Slot [i]</span>"
 		
 		if(current_lang_path && current_lang_path != "None")
-			html += "<span class='slot-cost'>2 Triumphs</span>"
+			html += "<span class='slot-cost'>1 Point</span>"
 		
 		html += "</div>"
 		

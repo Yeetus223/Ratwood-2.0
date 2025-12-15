@@ -40,35 +40,25 @@ GLOBAL_LIST_INIT(special_traits, build_special_traits())
 	apply_prefs_race_bonus(character, player)
 	if(player.prefs.dnr_pref)
 		apply_dnr_trait(character, player)
-	if(player.prefs.loadout && character.get_triumphs() >= player.prefs.loadout.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout.triumph_cost)
+	if(player.prefs.loadout)
 		character.mind.special_items[player.prefs.loadout.name] += player.prefs.loadout.path
-	if(player.prefs.loadout2 && character.get_triumphs() >= player.prefs.loadout2.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout2.triumph_cost)
+	if(player.prefs.loadout2)
 		character.mind.special_items[player.prefs.loadout2.name] += player.prefs.loadout2.path
-	if(player.prefs.loadout3 && character.get_triumphs() >= player.prefs.loadout3.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout3.triumph_cost)
+	if(player.prefs.loadout3)
 		character.mind.special_items[player.prefs.loadout3.name] += player.prefs.loadout3.path
-	if(player.prefs.loadout4 && character.get_triumphs() >= player.prefs.loadout4.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout4.triumph_cost)
+	if(player.prefs.loadout4)
 		character.mind.special_items[player.prefs.loadout4.name] += player.prefs.loadout4.path
-	if(player.prefs.loadout5 && character.get_triumphs() >= player.prefs.loadout5.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout5.triumph_cost)
+	if(player.prefs.loadout5)
 		character.mind.special_items[player.prefs.loadout5.name] += player.prefs.loadout5.path
-	if(player.prefs.loadout6 && character.get_triumphs() >= player.prefs.loadout6.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout6.triumph_cost)
+	if(player.prefs.loadout6)
 		character.mind.special_items[player.prefs.loadout6.name] += player.prefs.loadout6.path
-	if(player.prefs.loadout7 && character.get_triumphs() >= player.prefs.loadout7.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout7.triumph_cost)
+	if(player.prefs.loadout7)
 		character.mind.special_items[player.prefs.loadout7.name] += player.prefs.loadout7.path
-	if(player.prefs.loadout8 && character.get_triumphs() >= player.prefs.loadout8.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout8.triumph_cost)
+	if(player.prefs.loadout8)
 		character.mind.special_items[player.prefs.loadout8.name] += player.prefs.loadout8.path
-	if(player.prefs.loadout9 && character.get_triumphs() >= player.prefs.loadout9.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout9.triumph_cost)
+	if(player.prefs.loadout9)
 		character.mind.special_items[player.prefs.loadout9.name] += player.prefs.loadout9.path
-	if(player.prefs.loadout10 && character.get_triumphs() >= player.prefs.loadout10.triumph_cost)
-		character.adjust_triumphs(-player.prefs.loadout10.triumph_cost)
+	if(player.prefs.loadout10)
 		character.mind.special_items[player.prefs.loadout10.name] += player.prefs.loadout10.path
 	var/datum/job/assigned_job = SSjob.GetJob(character.mind?.assigned_role)
 	if(assigned_job)
