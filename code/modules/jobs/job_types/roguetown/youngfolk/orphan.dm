@@ -1,5 +1,5 @@
 /datum/job/roguetown/orphan
-	title = "Beggar"
+	title = "Vagabond"
 	flag = ORPHAN
 	department_flag = YOUNGFOLK
 	faction = "Station"
@@ -17,6 +17,7 @@
 	min_pq = -30
 	max_pq = null
 	round_contrib_points = 2
+	advjob_examine = TRUE
 
 	cmode_music = 'sound/music/combat_bum.ogg'
 	job_subclasses = list(
