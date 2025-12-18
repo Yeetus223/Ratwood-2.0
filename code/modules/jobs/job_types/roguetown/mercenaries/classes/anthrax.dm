@@ -1,6 +1,6 @@
 /datum/advclass/mercenary/anthrax
-	name = "Crocs de l'araignée Cavalier"
-	tutorial = "The Crocs de l'araignée, translated literally to mean 'Spider's Teeth', is a renowned collective of blades, whips, and riders for hire often employed in the vast drow undercity complexes and occasionally the surface above. Infamous for their battlefrenzy, sadism, and mastery over arachnid cavalry, a member of the Spider's Teeth stands among some of the fiercest if cruelest warriors in Psydonia. Dark elves ultimately are only truly aligned to themselves and their own interests; this trait makes them surprisingly pragmatic and straightforward mercenaries, as a drow can be counted on to do any job so long as the price is right and it serves whatever higher ambition they might have."
+	name = "Crocs de \"l'araignée\" Cavalier"
+	tutorial = "The Crocs de \"l'araignée\", translated literally to mean \"'Spider's Teeth'\", is a renowned collective of blades, whips, and riders for hire often employed in the vast drow undercity complexes and occasionally the surface above. Infamous for their battlefrenzy, sadism, and mastery over arachnid cavalry, a member of the Spider's Teeth stands among some of the fiercest if cruelest warriors in Psydonia. Dark elves ultimately are only truly aligned to themselves and their own interests; this trait makes them surprisingly pragmatic and straightforward mercenaries, as a drow can be counted on to do any job so long as the price is right and it serves whatever higher ambition they might have."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 		/datum/species/elf/dark,
@@ -76,8 +76,8 @@
 
 	H.merctype = 15
 
-/datum/advclass/mercenary/anthrax/assassin
-	name = ""Crocs de l'araignée Assassin"
+/datum/advclass/mercenary/anthrax/assassin // doesn't seem to have been enabled before the mercs removal altogether after the rebase, we'll keep it as such accordingly.
+	name = "Crocs de \"l'araignée\"Assassin"
 	outfit = /datum/outfit/job/roguetown/mercenary/anthrax/assassin
 	traits_applied = list(TRAIT_DARKVISION, TRAIT_DODGEEXPERT)
 	subclass_stats = list(
