@@ -34,7 +34,6 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	"Annoying Face"=/datum/charflaw/annoying_face,
 	"Eerie Beauty"=/datum/charflaw/eerie_beauty,
 	"Nude Sleeper"=/datum/charflaw/nude_sleeper,
-	"Rotman"=/datum/charflaw/rotman,
 	/datum/charflaw/mind_broken::name = /datum/charflaw/mind_broken,
 	"Random or No Flaw"=/datum/charflaw/randflaw,
 	"No Flaw (-3 TRIUMPHS)"=/datum/charflaw/noflaw,
@@ -479,22 +478,6 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		REMOVE_TRAIT(H, TRAIT_NUDE_SLEEPER, TRAIT_GENERIC)
-
-/datum/charflaw/rotman
-	name = "Rotman"
-	desc = "I am partially undead. My heart does not beat."
-
-/datum/charflaw/rotman/on_mob_creation(mob/user)
-	..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		ADD_TRAIT(H, TRAIT_ROTMAN, TRAIT_GENERIC)
-
-/datum/charflaw/rotman/on_removal(mob/user)
-	..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		REMOVE_TRAIT(H, TRAIT_ROTMAN, TRAIT_GENERIC)
 
 /datum/charflaw/hunted/flaw_on_life(mob/user)
 	if(!ishuman(user))
